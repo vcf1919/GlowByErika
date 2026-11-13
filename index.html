@@ -3,45 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Glow by Erika</title>
+<title>Centro de belleza en Catarroja | Glow by Erika · Uñas, faciales y depilación</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Glow by Erika, centro de belleza en Catarroja (Carrer de la Pau 2). Uñas semipermanentes, gel y PolyAcrylGel, faciales, depilación, masajes y maderoterapia. Reserva tu cita online.">
+<!-- Mientras sea una propuesta, que no la indexen los buscadores. Quitar al publicar la web definitiva. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Glow by Erika, centro de belleza en Catarroja (Carrer de la Pau 2). Uñas semipermanentes, gel y PolyAcrylGel, faciales, depilación, maquillaje, masajes y maderoterapia.">
 <meta name="theme-color" content="#F6EFE7">
-<meta name="format-detection" content="telephone=no">
+<!-- URL BASE: https://glowbyerika.netlify.app/  (si cambia el dominio, cámbialo en estas líneas og: y en js/config.js) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Glow by Erika">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Glow by Erika · Centro de belleza en Catarroja">
+<meta property="og:description" content="Uñas, faciales, depilación, maquillaje y masajes en el Carrer de la Pau 2, Catarroja.">
+<meta property="og:url" content="https://glowbyerika.netlify.app/">
+<meta property="og:image" content="https://glowbyerika.netlify.app/img/og-glowbyerika.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo de Glow by Erika junto a una manicura francesa en burdeos con glitter">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:ital,wght@0,300..700;1,400&display=swap">
 <link rel="preload" as="image" href="img/hero-francesa-burdeos.webp" fetchpriority="high">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BeautySalon",
-  "name": "Glow by Erika",
-  "description": "Centro de belleza y autocuidado en Catarroja: uñas, faciales, depilación, maquillaje, masajes y maderoterapia.",
-  "founder": { "@type": "Person", "name": "Erika Codoñer" },
-  "foundingDate": "2026-09-12",
-  "telephone": "+34653302332",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Carrer de la Pau, 2",
-    "addressLocality": "Catarroja",
-    "addressRegion": "Valencia",
-    "postalCode": "46470",
-    "addressCountry": "ES"
-  },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "13:30" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:00", "closes": "20:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:30", "closes": "13:30" }
-  ],
-  "priceRange": "6 € – 60 €",
-  "sameAs": ["https://www.instagram.com/glow.by.erika/"]
-}
-</script>
-
 <style>
-/* Layout: luminoso y suave — bloques redondeados que "brillan" (halo nude), sin arcos ni filetes editoriales; un único momento estrella: la reserva. Mobile-first. */
+/* Layout: luminoso y suave — bloques redondeados que "brillan" (halo nude), sin arcos ni filetes editoriales; un único momento estrella: la reserva. */
 :root{
   --cream:#F6EFE7;      /* fondo */
   --pearl:#FCF8F4;      /* tarjetas */
@@ -61,131 +47,97 @@
 
   --ease:cubic-bezier(0.22,1,0.36,1);
   --r-lg:30px; --r-md:20px; --r-sm:14px;
-  --nav-h:64px;
-  --gutter:max(16px, env(safe-area-inset-left,0px));
-  --gutter-r:max(16px, env(safe-area-inset-right,0px));
   --shadow:0 18px 40px -22px rgba(120,70,50,.35);
   --glow:radial-gradient(60% 60% at 50% 50%, rgba(255,238,224,.95), rgba(232,207,196,.55) 45%, rgba(220,169,163,0) 72%);
   --hl:linear-gradient(100deg, rgba(232,207,196,0) 0 1%, rgba(240,205,190,.95) 4%, #F6DCCB 50%, rgba(214,178,120,.55) 97%, rgba(232,207,196,0));
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;overflow-x:clip;scroll-padding-top:calc(var(--nav-h) + env(safe-area-inset-top,0px) + 8px)}
-body{margin:0;font-synthesis:none;background:var(--cream);color:var(--cocoa);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden;overflow-x:clip;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+section{scroll-margin-top:calc(56px + env(safe-area-inset-top,0px))}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+main,.footer{overflow-x:clip}
+body{margin:0;font-synthesis:none;background:var(--cream);color:var(--cocoa);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:clip}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cream)}
-body.menu-open{overflow:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-button,a{touch-action:manipulation}
 :focus-visible{outline:3px solid var(--gold-ink);outline-offset:3px;border-radius:8px}
-.wrap{max-width:1160px;margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
-section{padding-block:56px}
-@media (min-width:760px){section{padding-block:72px}}
-h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:0;font-synthesis:none;overflow-wrap:break-word}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(18px, env(safe-area-inset-left,0px));padding-right:max(18px, env(safe-area-inset-right,0px))}
+section{padding-block:72px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:0;font-synthesis:none}
 h1 em,h2 em{font-style:normal;color:var(--rose-ink)}
-h2{font-size:clamp(1.85rem,7.4vw,3.15rem)}
+h2{font-size:clamp(2rem,6.6vw,3.15rem)}
 h3{font-size:1.3rem}
 p{margin:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .spark{color:var(--gold);display:inline-block}
 .eyebrow{display:inline-flex;align-items:center;gap:.5em;font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
-.hl{background:var(--hl) 0 88%/100% 46% no-repeat;padding:0 .08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.lead{color:var(--cocoa-2);font-size:1.04rem;max-width:34em}
-.sec-head{display:grid;gap:12px;margin-bottom:28px}
-@media (min-width:760px){.lead{font-size:1.08rem}.sec-head{gap:14px;margin-bottom:34px}}
+.hl{background:var(--hl) 0 88%/100% 46% no-repeat;padding:0 .08em}
+.lead{color:var(--cocoa-2);font-size:1.08rem;max-width:34em}
+.sec-head{display:grid;gap:14px;margin-bottom:34px}
 
 /* ---------- botones ---------- */
-.btn{--bg:var(--cocoa);--fg:var(--cream);position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:0 24px;border-radius:999px;border:0;background:var(--bg);color:var(--fg);font:500 1rem/1.15 var(--f-body);text-align:center;text-decoration:none;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .38s var(--ease),box-shadow .38s var(--ease),background .38s var(--ease)}
+.btn{--bg:var(--cocoa);--fg:var(--cream);position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:54px;padding:0 26px;border-radius:999px;border:0;background:var(--bg);color:var(--fg);font:500 1rem/1 var(--f-body);text-decoration:none;cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .38s var(--ease),box-shadow .38s var(--ease),background .38s var(--ease)}
 .btn::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(255,240,226,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
-.btn:active{transform:scale(.97)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(59,42,34,.55)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:active{transform:translateY(0) scale(.98)}
 .btn .spark{transition:transform .5s var(--ease)}
+.btn:hover .spark{transform:rotate(90deg) scale(1.15)}
 .btn-glow{--bg:linear-gradient(120deg,#F3D7C9,#E8CFC4 45%,#E7C99A);--fg:var(--cocoa)}
 .btn-ghost{--bg:transparent;--fg:var(--cocoa);box-shadow:inset 0 0 0 1.5px var(--cocoa)}
+.btn-ghost:hover{--bg:rgba(59,42,34,.05)}
 .btn-sm{min-height:44px;padding:0 18px;font-size:.92rem}
 .btn[disabled]{opacity:.38;cursor:not-allowed;transform:none;box-shadow:none}
-@media (hover:hover){
-  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px -14px rgba(59,42,34,.55)}
-  .btn:hover::after{transform:translateX(120%)}
-  .btn:hover .spark{transform:rotate(90deg) scale(1.15)}
-  .btn-ghost:hover{--bg:rgba(59,42,34,.05)}
-}
 
 /* ---------- logo ---------- */
 .logo{display:inline-grid;justify-items:center;text-decoration:none;line-height:1;color:var(--cocoa)}
-.logo b{font-family:var(--f-display);font-weight:400;font-size:1.5rem;letter-spacing:.18em;padding-left:.18em;position:relative}
+.logo b{font-family:var(--f-display);font-weight:400;font-size:1.7rem;letter-spacing:.18em;padding-left:.18em;position:relative}
 .logo b::after{content:"✦";position:absolute;top:-.28em;right:-.55em;font-size:.45em;color:var(--gold)}
-.logo small{font-size:.52rem;font-weight:500;letter-spacing:.42em;padding-left:.42em;margin-top:4px;color:var(--gold-ink)}
-@media (min-width:760px){.logo b{font-size:1.7rem}.logo small{font-size:.56rem}}
+.logo small{font-size:.56rem;font-weight:500;letter-spacing:.42em;padding-left:.42em;margin-top:4px;color:var(--gold-ink)}
 
 /* ---------- nav ---------- */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(246,239,231,.88);backdrop-filter:saturate(1.3) blur(14px);-webkit-backdrop-filter:saturate(1.3) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
-.nav.scrolled,.nav.open{border-bottom-color:var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:var(--nav-h)}
-.nav-end{display:flex;align-items:center;gap:8px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(246,239,231,.82);backdrop-filter:saturate(1.3) blur(14px);-webkit-backdrop-filter:saturate(1.3) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
 .nav-links{display:none;gap:26px;font-size:.95rem}
 .nav-links a{text-decoration:none;color:var(--cocoa-2);transition:color .3s var(--ease)}
 .nav-links a:hover{color:var(--cocoa)}
-.menu-btn{width:44px;height:44px;border-radius:50%;border:0;background:transparent;box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center;cursor:pointer;color:var(--cocoa);padding:0}
-.menu-btn i,.menu-btn i::before,.menu-btn i::after{display:block;width:18px;height:1.6px;border-radius:2px;background:currentColor;transition:transform .35s var(--ease),opacity .2s}
-.menu-btn i{position:relative}
-.menu-btn i::before,.menu-btn i::after{content:"";position:absolute;left:0}
-.menu-btn i::before{top:-6px}.menu-btn i::after{top:6px}
-.nav.open .menu-btn i{background:transparent}
-.nav.open .menu-btn i::before{transform:translateY(6px) rotate(45deg)}
-.nav.open .menu-btn i::after{transform:translateY(-6px) rotate(-45deg)}
-.mnav{position:absolute;left:0;right:0;top:100%;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 24px 40px -24px rgba(59,42,34,.35);padding:8px var(--gutter-r) 20px var(--gutter);display:grid;max-height:calc(100dvh - var(--nav-h));overflow:auto}
-.mnav[hidden]{display:none}
-.mnav a{display:flex;align-items:center;justify-content:space-between;min-height:54px;font-family:var(--f-display);font-size:1.35rem;text-decoration:none;border-bottom:1px dashed rgba(59,42,34,.16)}
-.mnav a::after{content:"✦";font-size:.7rem;color:var(--gold)}
-.mnav .mnav-contact{display:flex;gap:10px;margin-top:16px;border:0}
-.mnav .mnav-contact a{flex:1;justify-content:center;font-family:var(--f-body);font-size:.95rem;border:0}
-.mnav .mnav-contact a::after{content:none}
-@media (max-width:359px){.nav .btn-sm{padding:0 14px;font-size:.88rem}.nav .btn-sm .spark{display:none}}
-@media (min-width:900px){.nav-links{display:flex}.menu-btn,.mnav{display:none!important}.nav .wrap{min-height:68px}}
+@media (min-width:900px){.nav-links{display:flex}}
 
 /* ---------- hero ---------- */
-.hero{padding-block:18px 44px;position:relative}
-.hero .wrap{display:grid;gap:26px;align-items:center}
-.hero-copy{display:grid;gap:18px;min-width:0}
-.chip{display:inline-flex;align-items:center;gap:.5em;width:fit-content;max-width:100%;padding:7px 14px;border-radius:999px;background:var(--pearl);box-shadow:inset 0 0 0 1px var(--line);font-size:.82rem;line-height:1.35;color:var(--cocoa-2)}
-.hero h1{font-size:clamp(2.2rem,10.4vw,4.8rem);line-height:1.06}
-.hero-ctas{display:grid;grid-template-columns:1fr;gap:10px}
-.open{display:flex;align-items:flex-start;gap:12px;font-size:.92rem;line-height:1.45;color:var(--cocoa-2)}
-.open .dot{width:10px;height:10px;margin-top:.4em;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(78,122,85,.5);animation:pulse 2.2s var(--ease) infinite;flex:none}
+.hero{padding-block:26px 56px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;align-items:center}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.chip{display:inline-flex;align-items:center;gap:.5em;width:fit-content;max-width:100%;padding:7px 14px;border-radius:999px;background:var(--pearl);box-shadow:inset 0 0 0 1px var(--line);font-size:.86rem;color:var(--cocoa-2)}
+.hero h1{font-size:clamp(2.5rem,10.2vw,4.8rem);line-height:1.06}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-ctas .btn{flex:1 1 180px}
+.open{display:flex;align-items:baseline;gap:10px;font-size:.95rem;color:var(--cocoa-2)}
+.open .dot{width:10px;height:10px;align-self:flex-start;margin-top:.45em;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(78,122,85,.5);animation:pulse 2.2s var(--ease) infinite;flex:none}
 .open.closed .dot{background:var(--rose-ink);animation:none}
 .open strong{color:var(--cocoa);font-weight:500}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(78,122,85,.45)}70%{box-shadow:0 0 0 10px rgba(78,122,85,0)}100%{box-shadow:0 0 0 0 rgba(78,122,85,0)}}
-.hero-media{position:relative;min-width:0;width:100%;max-width:440px;justify-self:center;padding:6% 4% 8%}
-.hero-media::before{content:"";position:absolute;inset:-4% -6%;background:var(--glow);filter:blur(8px);z-index:0;animation:breathe 7s ease-in-out infinite;pointer-events:none}
-@keyframes breathe{50%{transform:scale(1.04);opacity:.85}}
-.hero-media .ph{position:relative;z-index:1;box-shadow:var(--shadow);border:6px solid var(--pearl);transition:transform .7s var(--ease)}
-.hero-media .ph-main{width:78%;aspect-ratio:4/5;border-radius:22px;transform:rotate(-2.5deg)}
+.hero-media{position:relative;min-width:0;padding:6% 4% 8%}
+.hero-media::before{content:"";position:absolute;inset:-6% -14%;background:var(--glow);filter:blur(8px);z-index:0;animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.06);opacity:.85}}
+.hero-media .ph{position:relative;z-index:1;box-shadow:var(--shadow);border:7px solid var(--pearl);transition:transform .7s var(--ease)}
+.hero-media .ph-main{width:80%;aspect-ratio:4/5;border-radius:22px;transform:rotate(-2.5deg)}
 .hero-media .ph-side{position:absolute;z-index:2;right:2%;bottom:4%;width:46%;aspect-ratio:1;border-radius:18px;transform:rotate(5deg)}
-.sticker{position:absolute;z-index:3;background:var(--pearl);border-radius:16px;padding:9px 12px;box-shadow:var(--shadow);font-size:.76rem;line-height:1.3;max-width:46%}
-.sticker b{display:block;font-family:var(--f-display);font-size:1.15rem;font-weight:500}
-.sticker-1{left:0;bottom:8%;transform:rotate(-4deg)}
-.sticker-2{right:2%;top:4%;transform:rotate(5deg);background:var(--cocoa);color:var(--cream)}
+.hero-media:hover .ph-main{transform:rotate(-1deg)}
+.hero-media:hover .ph-side{transform:rotate(2deg) translateY(-6px)}
+.hero-media .ph[data-label]::after{top:12px;bottom:auto}
+.hero-media .ph[data-label]::before{top:auto;bottom:12px}
+.sticker{position:absolute;z-index:3;background:var(--pearl);border-radius:18px;padding:12px 16px;box-shadow:var(--shadow);font-size:.85rem;line-height:1.3}
+.sticker b{display:block;font-family:var(--f-display);font-size:1.35rem;font-weight:500}
+.sticker-1{left:0;bottom:10%;transform:rotate(-4deg)}
+.sticker-2{right:4%;top:8%;transform:rotate(5deg);background:var(--cocoa);color:var(--cream)}
 .sticker-2 b{color:#F1D9B3}
-@media (hover:hover){
-  .hero-media:hover .ph-main{transform:rotate(-1deg)}
-  .hero-media:hover .ph-side{transform:rotate(2deg) translateY(-6px)}
-}
-@media (min-width:480px){
-  .hero-ctas{grid-template-columns:1fr 1fr}
-  .sticker{padding:12px 16px;font-size:.85rem;max-width:none}
-  .sticker b{font-size:1.35rem}
-  .hero-media .ph{border-width:7px}
-}
 @media (min-width:900px){
   .hero{padding-block:40px 80px}
   .hero .wrap{grid-template-columns:1.1fr .9fr;gap:56px}
-  .hero-copy{gap:22px}
-  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-  .hero-media{max-width:none}
-  .hero-media::before{inset:-6% -14%}
-  .hero-media .ph-main{width:80%}
-  .chip{font-size:.86rem}
-  .open{font-size:.95rem}
+  .hero-ctas .btn{flex:0 0 auto}
 }
 
 /* ---------- placeholders de foto ---------- */
@@ -195,122 +147,111 @@ p{margin:0}
   linear-gradient(150deg,#F4E0D6,#E8CFC4 45%,#DFB9AF)}
 .ph img{width:100%;height:100%;object-fit:cover}
 .ph[data-label]::before{content:"✦";position:absolute;top:14px;right:16px;color:rgba(255,255,255,.9);font-size:1.1rem}
-.ph[data-label]::after{content:attr(data-label);position:absolute;left:12px;bottom:10px;max-width:calc(100% - 24px);font-size:.7rem;letter-spacing:.06em;text-transform:lowercase;color:rgba(59,42,34,.62);background:rgba(252,248,244,.6);padding:3px 9px;border-radius:999px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ph[data-label]::after{content:attr(data-label);position:absolute;left:14px;bottom:12px;font-size:.72rem;letter-spacing:.08em;text-transform:lowercase;color:rgba(59,42,34,.62);background:rgba(252,248,244,.6);padding:3px 9px;border-radius:999px}
 
 /* ---------- marquee ---------- */
-.marquee{background:linear-gradient(90deg,#EFD9CE,#F3E2D6 50%,#EBD3B4);overflow:hidden;padding-block:14px;border-block:1px solid rgba(201,164,106,.35)}
+.marquee{background:linear-gradient(90deg,#EFD9CE,#F3E2D6 50%,#EBD3B4);overflow:hidden;padding-block:18px;border-block:1px solid rgba(201,164,106,.35)}
 .marquee-track{display:flex;width:max-content;animation:scroll 32s linear infinite}
-.marquee-track span{font-family:var(--f-display);font-size:clamp(1.2rem,4.4vw,1.8rem);letter-spacing:.04em;padding-inline:18px;white-space:nowrap;display:inline-flex;align-items:center;gap:36px}
+.marquee-track span{font-family:var(--f-display);font-size:clamp(1.3rem,4.4vw,1.8rem);letter-spacing:.04em;padding-inline:22px;white-space:nowrap;display:inline-flex;align-items:center;gap:44px}
 .marquee-track span::after{content:"✦";font-style:normal;font-size:.6em;color:var(--gold-ink)}
 @keyframes scroll{to{transform:translateX(-50%)}}
-@media (min-width:760px){.marquee{padding-block:18px}.marquee-track span{padding-inline:22px;gap:44px}}
 
 /* ---------- promo ---------- */
-.promo-card{position:relative;overflow:hidden;border-radius:24px;background:var(--cocoa);color:var(--cream);padding:28px 22px;display:grid;gap:16px;box-shadow:var(--shadow)}
-.promo-card::before{content:"";position:absolute;width:420px;height:420px;right:-200px;top:-200px;background:radial-gradient(circle,rgba(232,207,196,.55),rgba(201,164,106,.18) 45%,transparent 70%);pointer-events:none}
+.promo-card{position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--cocoa);color:var(--cream);padding:34px 26px;display:grid;gap:18px;box-shadow:var(--shadow)}
+.promo-card::before{content:"";position:absolute;width:420px;height:420px;right:-160px;top:-180px;background:radial-gradient(circle,rgba(232,207,196,.55),rgba(201,164,106,.18) 45%,transparent 70%)}
 .promo-card>*{position:relative}
 .promo-card .eyebrow{color:#E9CF9F}
-.promo-card h2{font-size:clamp(1.8rem,7.4vw,3rem)}
+.promo-card h2{font-size:clamp(1.9rem,7vw,3rem);}
 .promo-card h2 em{color:#F3D7C9}
-.price-big{font-family:var(--f-display);font-size:clamp(3rem,15vw,5.2rem);line-height:.95;background:linear-gradient(110deg,#F6DCCB,#E7C99A 50%,#F6E7D8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-big{font-family:var(--f-display);font-size:clamp(3.2rem,14vw,5.2rem);line-height:.95;background:linear-gradient(110deg,#F6DCCB,#E7C99A 50%,#F6E7D8);-webkit-background-clip:text;background-clip:text;color:transparent}
 .promo-card p{color:rgba(246,239,231,.78);max-width:30em}
-.promo-card .btn{--bg:var(--cream);--fg:var(--cocoa);width:100%}
-@media (min-width:480px){.promo-card .btn{width:auto;justify-self:start}}
-@media (min-width:820px){.promo-card{border-radius:var(--r-lg);grid-template-columns:1.4fr auto;align-items:center;padding:48px 52px;gap:18px}.promo-card .price-wrap{grid-row:1/4;grid-column:2;text-align:right}}
+.promo-card .btn{--bg:var(--cream);--fg:var(--cocoa);justify-self:start}
+@media (min-width:820px){.promo-card{grid-template-columns:1.4fr auto;align-items:center;padding:48px 52px}.promo-card .price-wrap{grid-row:1/4;grid-column:2;text-align:right}}
 
 /* ---------- carta ---------- */
-.tabs{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px var(--gutter-r) 12px var(--gutter);margin-inline:calc(var(--gutter) * -1) calc(var(--gutter-r) * -1);scroll-snap-type:x proximity;scroll-padding-inline:var(--gutter);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 28px),transparent)}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:4px 2px 12px;margin-inline:-2px;scroll-snap-type:x proximity}
 .tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;scroll-snap-align:start;min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--pearl);box-shadow:inset 0 0 0 1px var(--line);color:var(--cocoa-2);font:500 .95rem var(--f-body);white-space:nowrap;cursor:pointer;transition:all .35s var(--ease)}
+.tab{flex:none;scroll-snap-align:start;min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--pearl);box-shadow:inset 0 0 0 1px var(--line);color:var(--cocoa-2);font:500 .95rem var(--f-body);cursor:pointer;transition:all .35s var(--ease)}
 .tab:hover{color:var(--cocoa)}
 .tab[aria-selected="true"],.tab[aria-pressed="true"]{background:var(--cocoa);color:var(--cream);box-shadow:none}
-@media (min-width:1192px){.tabs{padding-inline:2px;margin-inline:-2px;-webkit-mask-image:none;mask-image:none;flex-wrap:wrap}}
-.menu{background:var(--pearl);border-radius:22px;padding:4px 16px;box-shadow:inset 0 0 0 1px var(--line)}
-.menu-cat h3{font-size:1.4rem;padding:16px 0 4px;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.menu{background:var(--pearl);border-radius:var(--r-lg);padding:8px 22px;box-shadow:inset 0 0 0 1px var(--line)}
+.menu-cat h3{font-size:1.5rem;padding:18px 0 4px;display:flex;align-items:baseline;gap:10px}
 .menu-cat h3 small{font-family:var(--f-body);font-size:.8rem;color:var(--cocoa-2);font-weight:400}
-.svc{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;padding:14px 0;border-bottom:1px dashed rgba(59,42,34,.16)}
+.svc{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;padding:16px 0;border-bottom:1px dashed rgba(59,42,34,.16)}
 .svc:last-child{border-bottom:0}
-.svc-name{font-weight:500;min-width:0;line-height:1.35}
-.svc-meta{grid-column:1;font-size:.84rem;line-height:1.4;color:var(--cocoa-2)}
-.svc-price{font-family:var(--f-display);font-size:1.22rem;font-variant-numeric:tabular-nums;white-space:nowrap;grid-row:1;grid-column:2;text-align:right}
-.svc .btn{grid-column:2;grid-row:2;min-height:44px;padding:0 16px;font-size:.88rem}
+.svc-name{font-weight:500;min-width:0}
+.svc-meta{grid-column:1;font-size:.85rem;color:var(--cocoa-2)}
+.svc-price{font-family:var(--f-display);font-size:1.3rem;font-variant-numeric:tabular-nums;white-space:nowrap;grid-row:1;grid-column:2;text-align:right}
+.svc .btn{grid-column:2;grid-row:2;min-height:40px;padding:0 16px;font-size:.88rem}
 .menu-note{margin-top:14px;font-size:.88rem;color:var(--cocoa-2)}
-@media (min-width:760px){.menu{border-radius:var(--r-lg);padding:8px 22px}.menu-cat h3{font-size:1.5rem;padding-top:18px}.svc{grid-template-columns:1fr auto auto;gap:4px 24px;padding:16px 0}.svc .btn{grid-column:3;grid-row:1/3;min-height:40px}.svc-price{grid-row:1/3;font-size:1.3rem}}
+@media (min-width:760px){.svc{grid-template-columns:1fr auto auto;gap:4px 24px}.svc .btn{grid-column:3;grid-row:1/3}.svc-price{grid-row:1/3}}
 
 /* ---------- reserva ---------- */
 .booking{background:linear-gradient(180deg,var(--cream),#F1E3D9 40%,var(--cream))}
-.bk{max-width:760px;margin:0 auto;background:var(--pearl);border-radius:24px;box-shadow:var(--shadow),inset 0 0 0 1px var(--line);overflow:clip}
-.bk-top{padding:18px 16px 0}
-.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:0;padding:0}
-.steps li{display:grid;justify-items:center;gap:6px;font-size:.72rem;color:var(--cocoa-2);text-align:center}
-.steps li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:.85rem;background:var(--cream);box-shadow:inset 0 0 0 1.5px var(--line);transition:all .4s var(--ease)}
+.bk{max-width:760px;margin:0 auto;background:var(--pearl);border-radius:var(--r-lg);box-shadow:var(--shadow),inset 0 0 0 1px var(--line);overflow:hidden}
+.bk-top{padding:22px 22px 0}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0;padding:0}
+.steps li{display:grid;justify-items:center;gap:6px;font-size:.76rem;color:var(--cocoa-2);text-align:center}
+.steps li span{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:.88rem;background:var(--cream);box-shadow:inset 0 0 0 1.5px var(--line);transition:all .4s var(--ease)}
 .steps li.done span{background:var(--nude);box-shadow:none;color:var(--cocoa)}
 .steps li.active span{background:var(--cocoa);color:var(--cream);box-shadow:0 0 0 5px rgba(232,207,196,.8)}
 .steps li.active{color:var(--cocoa);font-weight:500}
-.bar{height:5px;border-radius:9px;background:var(--busy);margin:16px 0 0;overflow:hidden}
+.bar{height:5px;border-radius:9px;background:var(--busy);margin:18px 0 0;overflow:hidden}
 .bar i{display:block;height:100%;width:25%;border-radius:inherit;background:linear-gradient(90deg,var(--nude),var(--rose),var(--gold));transition:width .6s var(--ease)}
-.bk-body{padding:20px 16px 12px;min-height:320px}
-.pane{display:grid;gap:16px;animation:paneIn .5s var(--ease);min-width:0}
+.bk-body{padding:24px 22px 8px;min-height:360px}
+.pane{display:grid;gap:18px;animation:paneIn .5s var(--ease)}
 @keyframes paneIn{from{opacity:0;transform:translateY(12px)}}
-.pane h3{font-size:1.45rem;scroll-margin-top:calc(var(--nav-h) + 24px)}
-.pane h3:focus{outline:none}
-.pane .hint{color:var(--cocoa-2);font-size:.9rem}
-.pane .tabs{padding-inline:16px;margin-inline:-16px;scroll-padding-inline:16px}
-.opt-list{display:grid;gap:8px;padding:2px;margin:-2px}
-.opt{display:grid;grid-template-columns:1fr auto;gap:2px 12px;text-align:left;width:100%;min-height:60px;padding:12px 14px;border-radius:var(--r-sm);border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font:inherit;line-height:1.35;color:inherit;cursor:pointer;transition:all .3s var(--ease)}
+.pane h3{font-size:1.55rem}
+.pane .hint{color:var(--cocoa-2);font-size:.92rem}
+.opt-list{display:grid;gap:8px;max-height:380px;overflow:auto;padding:2px;margin:-2px}
+.opt{display:grid;grid-template-columns:1fr auto;gap:2px 12px;text-align:left;width:100%;padding:14px 16px;border-radius:var(--r-sm);border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font:inherit;color:inherit;cursor:pointer;transition:all .3s var(--ease)}
+.opt:hover{box-shadow:inset 0 0 0 1.5px var(--rose)}
 .opt b{font-weight:500}
 .opt small{color:var(--cocoa-2);font-size:.82rem}
-.opt .p{grid-row:1/3;grid-column:2;align-self:center;font-family:var(--f-display);font-size:1.1rem;white-space:nowrap}
+.opt .p{grid-row:1/3;grid-column:2;align-self:center;font-family:var(--f-display);font-size:1.15rem}
 .opt[aria-pressed="true"]{background:linear-gradient(120deg,#F6E2D7,#F1DCC7);box-shadow:inset 0 0 0 2px var(--cocoa)}
 .week-nav{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.week-nav strong{font-family:var(--f-display);font-weight:400;font-size:1.08rem;text-align:center}
-.icon-btn{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;font-size:1.2rem;color:var(--cocoa);transition:all .3s var(--ease)}
+.week-nav strong{font-family:var(--f-display);font-weight:400;font-size:1.15rem;text-transform:capitalize}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;font-size:1.1rem;color:var(--cocoa);transition:all .3s var(--ease)}
+.icon-btn:hover:not([disabled]){background:var(--nude)}
 .icon-btn[disabled]{opacity:.3;cursor:not-allowed}
-.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
-.day{display:grid;justify-items:center;gap:1px;padding:8px 0;min-height:68px;border-radius:12px;border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font:inherit;color:inherit;cursor:pointer;transition:all .3s var(--ease);min-width:0}
-.day small{font-size:.66rem;text-transform:uppercase;letter-spacing:.04em;color:var(--cocoa-2)}
-.day b{font-family:var(--f-display);font-size:1.25rem;font-weight:400;font-variant-numeric:tabular-nums;line-height:1.2}
-.day em{font-style:normal;font-size:.6rem;line-height:1.2;color:var(--cocoa-2);min-height:1.2em;max-width:100%;padding-inline:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.day em .w{display:none}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{display:grid;justify-items:center;gap:2px;padding:10px 0;border-radius:var(--r-sm);border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font:inherit;color:inherit;cursor:pointer;transition:all .3s var(--ease);min-width:0}
+.day small{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--cocoa-2)}
+.day b{font-family:var(--f-display);font-size:1.35rem;font-weight:400;font-variant-numeric:tabular-nums}
+.day em{font-style:normal;font-size:.62rem;color:var(--cocoa-2);min-height:1em}
+.day:hover:not([disabled]){box-shadow:inset 0 0 0 1.5px var(--rose)}
 .day[disabled]{opacity:.42;cursor:not-allowed;background:transparent}
 .day[aria-pressed="true"]{background:var(--cocoa);color:var(--cream);box-shadow:none}
 .day[aria-pressed="true"] small,.day[aria-pressed="true"] em{color:rgba(246,239,231,.75)}
 .slot-group{display:grid;gap:10px}
 .slot-group h4{margin:0;font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink)}
-.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:8px}
-.slot{min-height:48px;border-radius:12px;border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font:500 .98rem var(--f-body);font-variant-numeric:tabular-nums;color:var(--cocoa);cursor:pointer;transition:all .3s var(--ease)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+.slot{min-height:46px;border-radius:12px;border:0;background:var(--cream);box-shadow:inset 0 0 0 1px var(--line);font:500 .98rem var(--f-body);font-variant-numeric:tabular-nums;color:var(--cocoa);cursor:pointer;transition:all .3s var(--ease)}
+.slot:hover:not([disabled]){box-shadow:inset 0 0 0 1.5px var(--rose);transform:translateY(-1px)}
 .slot[disabled]{cursor:not-allowed;background:repeating-linear-gradient(135deg,var(--busy) 0 6px,#F4ECE5 6px 12px);color:rgba(59,42,34,.38);text-decoration:line-through;box-shadow:none}
 .slot[aria-pressed="true"]{background:var(--cocoa);color:var(--cream);box-shadow:0 0 0 4px rgba(232,207,196,.9)}
-@media (hover:hover){
-  .opt:hover{box-shadow:inset 0 0 0 1.5px var(--rose)}
-  .icon-btn:hover:not([disabled]){background:var(--nude)}
-  .day:hover:not([disabled]){box-shadow:inset 0 0 0 1.5px var(--rose)}
-  .slot:hover:not([disabled]){box-shadow:inset 0 0 0 1.5px var(--rose);transform:translateY(-1px)}
-}
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.8rem;color:var(--cocoa-2)}
 .legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;box-shadow:inset 0 0 0 1px var(--line);background:var(--cream)}
 .legend .b{background:repeating-linear-gradient(135deg,var(--busy) 0 3px,#F4ECE5 3px 6px)}
-.summary{display:grid;gap:0;border-radius:var(--r-md);background:var(--cream);padding:4px 16px;margin:0}
+.summary{display:grid;gap:0;border-radius:var(--r-md);background:var(--cream);padding:6px 18px}
 .summary div{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dashed rgba(59,42,34,.16)}
 .summary div:last-child{border-bottom:0}
-.summary dt{color:var(--cocoa-2);font-size:.9rem;flex:none}
-.summary dd{margin:0;font-weight:500;text-align:right;min-width:0;overflow-wrap:anywhere}
-.summary .total dd{font-family:var(--f-display);font-size:1.35rem;font-weight:400}
+.summary dt{color:var(--cocoa-2);font-size:.92rem}
+.summary dd{margin:0;font-weight:500;text-align:right}
+.summary .total dd{font-family:var(--f-display);font-size:1.4rem;font-weight:400}
 .field{display:grid;gap:6px}
 .field label{font-size:.9rem;font-weight:500}
-.field input,.field textarea{width:100%;min-height:52px;padding:12px 16px;border-radius:var(--r-sm);border:0;background:var(--cream);box-shadow:inset 0 0 0 1.5px var(--line);font:inherit;font-size:max(16px,1rem);color:var(--cocoa);-webkit-appearance:none;appearance:none;transition:box-shadow .3s var(--ease)}
+.field input,.field textarea{width:100%;min-height:52px;padding:12px 16px;border-radius:var(--r-sm);border:0;background:var(--cream);box-shadow:inset 0 0 0 1.5px var(--line);font:inherit;color:var(--cocoa);transition:box-shadow .3s var(--ease)}
 .field textarea{min-height:84px;resize:vertical}
 .field input:focus,.field textarea:focus{outline:none;box-shadow:inset 0 0 0 2px var(--cocoa)}
 .field .err{font-size:.82rem;color:#A0413A;min-height:1.1em}
 .fields{display:grid;gap:12px}
-.bk-foot{position:sticky;bottom:0;z-index:5;display:grid;grid-template-columns:1fr;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:rgba(252,248,244,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.bk-foot[hidden]{display:none}
-.bk-foot .mini{font-size:.84rem;color:var(--cocoa-2);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center}
-.bk-foot .btns{display:grid;grid-template-columns:auto 1fr;gap:8px}
-.bk-foot .btns .btn{min-height:50px}
-.bk-foot .btns #bkBack[hidden]{display:none}
-.bk-foot .btns #bkBack[hidden] + #bkNext{grid-column:1/-1}
-.done-pane{text-align:center;justify-items:center;padding-block:14px}
+@media (min-width:640px){.fields{grid-template-columns:1fr 1fr}.fields .full{grid-column:1/-1}}
+.bk-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 22px 22px;border-top:1px solid var(--line);background:var(--pearl)}
+.bk-foot .mini{font-size:.85rem;color:var(--cocoa-2);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bk-foot .btns{display:flex;gap:8px;flex:none}
+.done-pane{text-align:center;justify-items:center;padding-block:18px}
 .burst{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-size:2.4rem;color:var(--gold-ink);background:var(--glow);position:relative;animation:pop .8s var(--ease)}
 .burst::before,.burst::after{content:"✦";position:absolute;font-size:.9rem;color:var(--gold)}
 .burst::before{top:4px;right:2px;animation:twinkle 1.6s ease-in-out infinite}
@@ -319,126 +260,241 @@ p{margin:0}
 @keyframes twinkle{50%{opacity:.2;transform:scale(.6)}}
 .code{font-variant-numeric:tabular-nums;letter-spacing:.12em;font-weight:600;background:var(--cream);padding:6px 14px;border-radius:999px}
 .demo-tag{font-size:.78rem;color:var(--cocoa-2);background:rgba(232,207,196,.45);padding:6px 12px;border-radius:999px}
-@media (min-width:400px){.day em .w{display:inline}.days{gap:6px}}
-@media (min-width:640px){
-  .bk{border-radius:var(--r-lg)}
-  .bk-top{padding:22px 22px 0}
-  .bk-body{padding:24px 22px 8px;min-height:360px}
-  .pane{gap:18px}.pane h3{font-size:1.55rem}
-  .pane .tabs{padding-inline:22px;margin-inline:-22px}
-  .opt-list{max-height:380px;overflow:auto}
-  .steps{gap:6px}.steps li{font-size:.76rem}.steps li span{width:32px;height:32px;font-size:.88rem}
-  .day{padding:10px 0;min-height:0}.day b{font-size:1.35rem}.day em{font-size:.62rem}.day small{font-size:.7rem}
-  .slots{grid-template-columns:repeat(auto-fill,minmax(84px,1fr))}
-  .fields{grid-template-columns:1fr 1fr}.fields .full{grid-column:1/-1}
-  .bk-foot{position:static;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 22px 22px;background:var(--pearl);backdrop-filter:none;-webkit-backdrop-filter:none}
-  .bk-foot .mini{text-align:left}
-  .bk-foot .btns{display:flex;flex:none}
-  .bk-foot .btns .btn{min-height:44px}
-}
+
+
+/* ---------- reserva con Booksy ---------- */
+.bkc{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-items:center;background:var(--pearl);border-radius:var(--r-lg);padding:30px 22px;box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.bkc-copy{display:grid;gap:18px;min-width:0}
+.bkc-steps{list-style:none;margin:4px 0;padding:0;display:grid;gap:4px;position:relative}
+.bkc-steps li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;position:relative}
+.bkc-steps li:not(:last-child)::after{content:"";position:absolute;left:17px;top:48px;bottom:-6px;width:2px;background:linear-gradient(var(--nude),var(--gold));opacity:.6}
+.bkc-steps li>span{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:600;background:var(--cream);box-shadow:inset 0 0 0 1.5px var(--nude)}
+.bkc-steps li:first-child>span{background:var(--cocoa);color:var(--cream);box-shadow:0 0 0 5px rgba(232,207,196,.8)}
+.bkc-steps b{display:block;font-weight:500}
+.bkc-steps small{color:var(--cocoa-2);font-size:.88rem}
+.bkc-ctas{display:flex;flex-wrap:wrap;gap:10px}
+.bkc-ctas .btn{flex:1 1 200px}
+.bkc-note{font-size:.82rem;color:var(--cocoa-2)}
+.bkc-media{position:relative;max-width:420px;width:100%;justify-self:center;padding:0 0 8%}
+.bkc-media .ph{aspect-ratio:1;border-radius:22px;border:7px solid var(--cream);box-shadow:var(--shadow);transform:rotate(2deg)}
+.bkc-ticket{position:absolute;left:-2%;bottom:0;display:grid;gap:2px;background:var(--cocoa);color:var(--cream);padding:14px 18px;border-radius:18px;box-shadow:var(--shadow);transform:rotate(-3deg);font-size:.82rem}
+.bkc-ticket small{color:#E9CF9F;letter-spacing:.1em;text-transform:uppercase;font-size:.68rem}
+.bkc-ticket b{font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.bkc-ticket span{color:rgba(246,239,231,.75)}
+@media (min-width:900px){.bkc{grid-template-columns:1.1fr .9fr;gap:56px;padding:52px}}
+@media (max-width:699px){.bkc{padding:26px 18px}.bkc-ctas .btn{flex:1 1 100%}.bkc-media{max-width:300px}}
+/* ventana */
+html.lock{overflow:hidden}
+.sheet{position:fixed;inset:0;z-index:80;display:grid;align-items:end;justify-items:center}
+.sheet-bg{position:absolute;inset:0;background:rgba(59,42,34,.42);opacity:0;transition:opacity .35s var(--ease)}
+.sheet-card{position:relative;width:min(520px,100%);background:var(--pearl);border-radius:28px 28px 0 0;padding:26px max(20px, env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(20px, env(safe-area-inset-left,0px));display:grid;gap:16px;transform:translateY(100%);transition:transform .45s var(--ease);box-shadow:0 -20px 50px -20px rgba(59,42,34,.45);outline:none}
+.sheet-card::before{content:"";justify-self:center;width:44px;height:5px;border-radius:9px;background:var(--line);margin:-12px 0 2px}
+.sheet.open .sheet-bg{opacity:1}
+.sheet.open .sheet-card{transform:none}
+.sheet-x{position:absolute;top:14px;right:14px}
+.sheet h3{font-size:1.6rem;padding-right:48px}
+.sheet-svc{display:flex;justify-content:space-between;gap:12px;align-items:baseline;background:var(--cream);border-radius:var(--r-sm);padding:14px 16px;font-weight:500}
+.sheet-svc b{font-family:var(--f-display);font-weight:400;font-size:1.2rem;white-space:nowrap}
+.sheet .btn{width:100%}
+.sheet .demo-tag{justify-self:center;text-align:center}
+@media (min-width:700px){.sheet{align-items:center}.sheet-card{border-radius:28px;padding:30px}.sheet-card::before{display:none}.sheet-card{transform:translateY(24px) scale(.98);opacity:0;transition:transform .45s var(--ease),opacity .3s var(--ease)}.sheet.open .sheet-card{transform:none;opacity:1}}
 
 /* ---------- galería ---------- */
-.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(130px,40vw,190px);grid-auto-flow:dense;gap:8px}
-.gallery figure{margin:0;min-width:0;transition:opacity .4s var(--ease),transform .4s var(--ease)}
-.gallery figure .ph{height:100%;border-radius:16px;transition:transform .7s var(--ease)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;gap:10px}
+.gallery figure{margin:0;transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.gallery figure .ph{height:100%;transition:transform .7s var(--ease)}
+.gallery figure:hover .ph{transform:scale(1.03)}
 .gallery .t{grid-row:span 2}
 .gallery .w{grid-column:span 2}
 .gallery figure[hidden]{display:none}
-@media (hover:hover){.gallery figure:hover .ph{transform:scale(1.03)}}
-@media (min-width:820px){.gallery{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}.gallery figure .ph{border-radius:var(--r-md)}}
+@media (min-width:820px){.gallery{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}}
 
 /* ---------- sobre ---------- */
-.about .wrap{display:grid;gap:30px;align-items:center}
-.about-photo{position:relative;max-width:min(260px,72vw);width:100%;justify-self:center}
-.about-photo::before{content:"";position:absolute;inset:-10%;background:var(--glow);z-index:0;pointer-events:none}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;align-items:center}
+.about-photo{position:relative;max-width:300px;width:100%;justify-self:center}
+.about-photo::before{content:"";position:absolute;inset:-10%;background:var(--glow);z-index:0}
 .about-photo .ph{position:relative;z-index:1;aspect-ratio:1;border-radius:50%;box-shadow:var(--shadow)}
-.about-photo .badge{position:absolute;z-index:2;right:-6%;bottom:-2%;width:92px;height:92px;border-radius:50%;background:var(--cocoa);color:var(--cream);display:grid;place-items:center;text-align:center;font-size:.64rem;letter-spacing:.08em;line-height:1.25;text-transform:uppercase;transform:rotate(-8deg);box-shadow:var(--shadow)}
-.about-photo .badge b{display:block;font-family:var(--f-display);font-size:1.35rem;letter-spacing:0;text-transform:none;font-weight:400;color:#F1D9B3}
-.about-copy{display:grid;gap:16px;min-width:0}
-.about-copy blockquote{margin:0;font-family:var(--f-display);font-size:clamp(1.35rem,5.4vw,2rem);line-height:1.3;color:var(--rose-ink)}
+.about-photo .badge{position:absolute;z-index:2;right:-4%;bottom:0;width:104px;height:104px;border-radius:50%;background:var(--cocoa);color:var(--cream);display:grid;place-items:center;text-align:center;font-size:.72rem;letter-spacing:.08em;line-height:1.25;text-transform:uppercase;transform:rotate(-8deg);box-shadow:var(--shadow)}
+.about-photo .badge b{display:block;font-family:var(--f-display);font-size:1.5rem;letter-spacing:0;text-transform:none;font-weight:400;color:#F1D9B3}
+.about-copy{display:grid;gap:18px;min-width:0}
+.about-copy blockquote{margin:0;font-family:var(--f-display);font-size:clamp(1.45rem,5vw,2rem);line-height:1.3;color:var(--rose-ink)}
 .about-copy p{color:var(--cocoa-2);max-width:34em}
 .sign{font-family:var(--f-display);font-size:1.3rem;color:var(--gold-ink)}
-@media (min-width:860px){.about .wrap{grid-template-columns:.9fr 1.1fr;gap:70px}.about-photo{max-width:300px}.about-photo .badge{width:104px;height:104px;right:-4%;bottom:0;font-size:.72rem}.about-photo .badge b{font-size:1.5rem}.about-copy{gap:18px}}
+@media (min-width:860px){.about .wrap{grid-template-columns:.9fr 1.1fr;gap:70px}}
 
 /* ---------- productos ---------- */
-.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.prod{display:grid;align-content:start;gap:10px;background:var(--pearl);border-radius:18px;padding:8px 8px 14px;box-shadow:inset 0 0 0 1px var(--line);transition:transform .45s var(--ease),box-shadow .45s var(--ease);min-width:0}
-.prod .ph{aspect-ratio:1;border-radius:12px}
-.prod div{padding-inline:4px;display:grid;gap:2px}
-.prod b{font-weight:500;line-height:1.3;font-size:.95rem}
-.prod small{color:var(--cocoa-2);font-size:.8rem;line-height:1.35}
-@media (hover:hover){.prod:hover{transform:translateY(-4px);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}}
-@media (min-width:820px){.products{grid-template-columns:repeat(4,1fr);gap:18px}.prod{border-radius:var(--r-md);padding:10px 10px 16px;gap:12px}.prod .ph{border-radius:14px}.prod div{padding-inline:6px}.prod b{font-size:1rem}}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.prod{display:grid;gap:12px;background:var(--pearl);border-radius:var(--r-md);padding:10px 10px 16px;box-shadow:inset 0 0 0 1px var(--line);transition:transform .45s var(--ease),box-shadow .45s var(--ease);min-width:0}
+.prod:hover{transform:translateY(-4px);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.prod .ph{aspect-ratio:1;border-radius:14px}
+.prod div{padding-inline:6px;display:grid;gap:2px}
+.prod b{font-weight:500;line-height:1.3}
+.prod small{color:var(--cocoa-2);font-size:.82rem}
+@media (min-width:820px){.products{grid-template-columns:repeat(4,1fr);gap:18px}}
+
+
+/* ---------- productos ---------- */
+.shop{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;align-items:center}
+.shop-img{aspect-ratio:16/10;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.shop-copy{display:grid;gap:16px;min-width:0}
+.shop-copy .btn{justify-self:start}
+@media (min-width:820px){.shop{grid-template-columns:1.1fr .9fr;gap:56px}}
 
 /* ---------- opiniones ---------- */
-.reviews{display:grid;gap:12px}
-.rev{position:relative;background:var(--pearl);border-radius:var(--r-md);padding:22px 18px 18px;box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:12px;min-width:0}
-.rev .tag{position:absolute;top:14px;right:14px;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-ink);background:rgba(232,207,196,.5);padding:4px 10px;border-radius:999px}
+.reviews{display:grid;gap:14px}
+.rev{position:relative;background:var(--pearl);border-radius:var(--r-md);padding:26px 22px 22px;box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:14px;min-width:0}
+.rev .tag{position:absolute;top:14px;right:14px;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-ink);background:rgba(232,207,196,.5);padding:4px 10px;border-radius:999px}
 .rev .stars{color:var(--gold);letter-spacing:.15em}
-.rev p{font-size:1rem}
-.rev footer{font-size:.86rem;color:var(--cocoa-2)}
-@media (max-width:819px){
-  .reviews{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;padding:2px var(--gutter-r) 6px var(--gutter);margin-inline:calc(var(--gutter) * -1) calc(var(--gutter-r) * -1);scroll-padding-inline:var(--gutter)}
-  .reviews::-webkit-scrollbar{display:none}
-  .rev{flex:0 0 min(84%,340px);scroll-snap-align:start}
-}
-@media (min-width:820px){.reviews{grid-template-columns:repeat(3,1fr);gap:14px}.rev{padding:26px 22px 22px;gap:14px}.rev p{font-size:1.02rem}}
+.rev p{font-size:1.02rem}
+.rev footer{font-size:.88rem;color:var(--cocoa-2)}
+@media (min-width:820px){.reviews{grid-template-columns:repeat(3,1fr)}}
 
 /* ---------- ubicación ---------- */
-.visit .wrap,#visitanos .wrap{display:grid;gap:16px}
-.info{display:grid;gap:20px;background:var(--pearl);border-radius:22px;padding:24px 18px;box-shadow:inset 0 0 0 1px var(--line);min-width:0}
-.info address{font-style:normal;font-size:1.05rem}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.info{display:grid;gap:22px;background:var(--pearl);border-radius:var(--r-lg);padding:28px 24px;box-shadow:inset 0 0 0 1px var(--line);min-width:0}
+.info address{font-style:normal;font-size:1.1rem}
 .hours{display:grid;gap:0;margin:0}
-.hours div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(59,42,34,.16);font-variant-numeric:tabular-nums;font-size:.95rem}
+.hours div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(59,42,34,.16);font-variant-numeric:tabular-nums}
 .hours div:last-child{border-bottom:0}
-.hours dt{color:var(--cocoa-2);flex:none}
+.hours dt{color:var(--cocoa-2)}
 .hours dd{margin:0;text-align:right}
 .hours .today{font-weight:600}
 .hours .today dt{color:var(--cocoa)}
 .phone{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.phone a.num{font-family:var(--f-display);font-size:1.55rem;font-weight:400;font-variant-numeric:tabular-nums;text-decoration:none;user-select:all;margin-right:auto}
-.contact-btns{display:grid;grid-template-columns:1fr;gap:10px}
+.phone strong{font-family:var(--f-display);font-size:1.6rem;font-weight:400;font-variant-numeric:tabular-nums;user-select:all}
+.contact-btns{display:flex;flex-wrap:wrap;gap:10px}
+.contact-btns .btn{flex:1 1 160px}
 .btn-wa{--bg:#2F6B4F;--fg:#fff}
-.map{position:relative;min-height:280px;border-radius:22px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);background:
+.map{position:relative;min-height:340px;border-radius:var(--r-lg);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line);background:
+  linear-gradient(0deg,rgba(246,239,231,.0),rgba(246,239,231,.0)),
   repeating-linear-gradient(28deg,transparent 0 46px,rgba(201,164,106,.22) 46px 50px),
   repeating-linear-gradient(-62deg,transparent 0 70px,rgba(220,169,163,.25) 70px 76px),
   linear-gradient(160deg,#F1E4DA,#E9D5C9)}
 .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.map-cover{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:12px;text-align:center;padding:20px}
-.map-cover[hidden]{display:none}
-.pin{width:56px;height:56px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--cocoa);display:grid;place-items:center;box-shadow:var(--shadow)}
+.map-cover{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:14px;text-align:center;padding:24px}
+.pin{width:62px;height:62px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--cocoa);display:grid;place-items:center;box-shadow:var(--shadow)}
 .pin span{transform:rotate(45deg);color:#F1D9B3;font-size:1.2rem}
-.map-cover p{font-size:.82rem;color:var(--cocoa-2);max-width:26em}
-@media (min-width:480px){.contact-btns{grid-template-columns:1fr 1fr}}
-@media (min-width:760px){.info{border-radius:var(--r-lg);padding:28px 24px;gap:22px}.map{border-radius:var(--r-lg);min-height:340px}.hours div{font-size:1rem}}
-@media (min-width:900px){#visitanos .wrap{grid-template-columns:.95fr 1.05fr;gap:22px}.map{min-height:100%}}
+.map-cover p{font-size:.85rem;color:var(--cocoa-2);max-width:26em}
+@media (min-width:900px){.visit .wrap{grid-template-columns:.95fr 1.05fr}.map{min-height:100%}}
 
 /* ---------- footer ---------- */
-.footer{background:var(--cocoa);color:var(--cream);padding-block:48px calc(104px + env(safe-area-inset-bottom,0px))}
-.footer .wrap{display:grid;gap:26px}
+.footer{background:var(--cocoa);color:var(--cream);padding-block:56px 110px}
+.footer .wrap{display:grid;gap:30px}
 .footer .logo{color:var(--cream);justify-items:start}
 .footer .logo small{color:#E9CF9F}
-.foot-links{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;font-size:.95rem}
-.foot-links a{color:rgba(246,239,231,.82);text-decoration:none;min-height:40px;display:flex;align-items:center}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:.95rem}
+.foot-links a{color:rgba(246,239,231,.82);text-decoration:none}
 .foot-links a:hover{color:#fff;text-decoration:underline}
 .legal{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:.82rem;color:rgba(246,239,231,.6);border-top:1px solid rgba(246,239,231,.14);padding-top:22px}
-.legal span{flex-basis:100%}
 .legal a{color:inherit}
 .footer :focus-visible{outline-color:#E9CF9F}
-@media (min-width:820px){.footer{padding-block:64px}.footer .wrap{grid-template-columns:1fr auto;align-items:center;gap:30px}.foot-links{display:flex;flex-wrap:wrap;gap:12px 24px}.foot-links a{min-height:0}.legal{grid-column:1/-1}.legal span{flex-basis:auto}}
+@media (min-width:820px){.footer{padding-block:64px}.footer .wrap{grid-template-columns:1fr auto;align-items:center}.legal{grid-column:1/-1}}
 
 /* ---------- botón flotante ---------- */
-.fab{position:fixed;z-index:40;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:min(calc(100% - 32px),360px);transform:translate(-50%,160%);transition:transform .55s var(--ease);box-shadow:0 18px 30px -12px rgba(59,42,34,.6);min-height:56px;padding:0 28px}
+.fab{position:fixed;z-index:40;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);transition:transform .55s var(--ease);box-shadow:0 18px 30px -12px rgba(59,42,34,.6);min-height:58px;padding:0 30px}
 .fab.show{transform:translate(-50%,0)}
 @media (min-width:900px){.fab{display:none}}
+
+
+/* ---------- ajustes móvil ---------- */
+@media (max-width:699px){
+  body{font-size:16px}
+  section{padding-block:52px}
+  .hero{padding-block:18px 40px}
+  .hero .wrap{gap:26px}
+  .hero-ctas .btn{flex:1 1 100%}
+  .chip{font-size:.8rem}
+  .hero-media{padding:2% 0 6%;max-width:420px;width:100%;justify-self:center}
+  .hero-media::before{inset:-4% -2%}
+  .about-photo::before{inset:-6%}
+  .sticker{padding:9px 12px;font-size:.78rem}
+  .sticker b{font-size:1.15rem}
+  .sticker-1{bottom:2%}
+  .sec-head{margin-bottom:24px}
+  /* pestañas que se deslizan de borde a borde */
+  .tabs{margin-inline:calc(-1 * max(18px, env(safe-area-inset-left,0px)));padding-inline:max(18px, env(safe-area-inset-left,0px));scroll-padding-inline:18px;
+        -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 28px),transparent)}
+  .bk .tabs{margin-inline:-18px;padding-inline:18px}
+  .menu{padding:4px 16px}
+  .svc{padding:14px 0}
+  /* reserva: sin scroll interno, avanza sola al tocar */
+  .bk-top{padding:18px 16px 0}
+  .bk-body{padding:20px 16px 8px;min-height:0}
+  .opt-list{max-height:none;overflow:visible}
+  .bk-foot{padding:14px 16px 16px}
+  .bk-foot .mini{white-space:normal;font-size:.8rem;line-height:1.35}
+  .days{gap:4px}
+  .day{padding:9px 0}
+  .day b{font-size:1.2rem}
+  .day em{font-size:.58rem}
+  .slots{grid-template-columns:repeat(4,1fr)}
+  /* galería */
+  .gallery{grid-auto-rows:132px;gap:8px}
+  /* sobre erika: la foto de perfil es pequeña, no la estiramos */
+  .about-photo{max-width:230px}
+  .about-photo .badge{width:88px;height:88px;font-size:.62rem}
+  .about-photo .badge b{font-size:1.25rem}
+  /* productos y opiniones en carrusel deslizable */
+  .products,.reviews{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:72%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+    margin-inline:calc(-1 * max(18px, env(safe-area-inset-left,0px)));padding-inline:max(18px, env(safe-area-inset-left,0px));scroll-padding-inline:max(18px, env(safe-area-inset-left,0px));padding-block:4px 10px}
+  .reviews{grid-auto-columns:86%}
+  .products::-webkit-scrollbar,.reviews::-webkit-scrollbar{display:none}
+  .prod,.rev{scroll-snap-align:start}
+  .swipe-hint{display:flex}
+  .info{padding:24px 18px}
+  .hours dd{font-size:.92rem}
+  .map{min-height:260px}
+  .footer{padding-block:44px calc(100px + env(safe-area-inset-bottom,0px))}
+  .foot-links{gap:0 6px}
+  .foot-links a{display:inline-flex;align-items:center;min-height:44px;padding-inline:8px;margin-left:-8px}
+  .legal a{display:inline-flex;align-items:center;min-height:44px}
+}
+.swipe-hint{display:none;align-items:center;gap:8px;margin-top:6px;font-size:.8rem;color:var(--cocoa-2)}
 
 /* ---------- animación de entrada ---------- */
 .reveal.in{animation:rise .9s var(--ease) both}
 .reveal.in.d1{animation-delay:.08s}.reveal.in.d2{animation-delay:.16s}.reveal.in.d3{animation-delay:.24s}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+
+/* ---------- añadidos: textos desde config.js, dos modos de reserva y opiniones ---------- */
+.phone a{text-decoration:none}
+[data-mode][hidden]{display:none!important}
+.bkc-ticket small{max-width:16em}
+/* vista de ejemplo de la agenda (modo Booksy sin perfil todavía) */
+.sheet-card{max-height:min(92dvh,760px);overflow-y:auto;overscroll-behavior:contain}
+.sheet .demo-tag{margin-right:44px;justify-self:start;text-align:left}
+.sheet .steps{margin-top:2px}
+.sheet .bar{margin-top:12px}
+.sheet .pane{gap:14px}
+.sheet .pane h3{font-size:1.45rem;padding-right:0}
+.sheet .tabs{margin-inline:-20px;padding-inline:20px;scroll-padding-inline:20px}
+.sheet .opt-list{max-height:none;overflow:visible}
+.sheet .days{gap:4px}
+.sheet .day em{font-size:.58rem}
+.sheet-foot{display:grid;grid-template-columns:auto 1fr;gap:8px}
+.sheet-foot .btn{width:auto}
+.sheet-foot #agBack[hidden]+#agNext{grid-column:1/-1}
+.sheet-wa{justify-self:center;font-size:.9rem;color:var(--cocoa-2);text-underline-offset:3px;padding:6px 8px}
+@media (min-width:700px){.sheet .tabs{margin-inline:-30px;padding-inline:30px}}
+/* opiniones */
+.rev-cta{background:var(--pearl);border-radius:var(--r-lg);padding:30px 24px;box-shadow:inset 0 0 0 1px var(--line);display:grid;gap:18px;justify-items:start;max-width:760px}
+.rev-cta p{color:var(--cocoa-2);max-width:34em}
+.rev-rows{display:grid;gap:14px;overflow:hidden;margin-inline:calc(-1 * max(18px, env(safe-area-inset-left,0px)));
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent)}
+.rev-row{display:flex;width:max-content;animation:scroll 70s linear infinite}
+.rev-row.rev-back{animation-direction:reverse}
+.rev-row .rev{flex:none;width:min(330px,78vw);margin-right:14px}
+.rev-rows:hover .rev-row{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.rev-rows{overflow-x:auto;-webkit-mask-image:none;mask-image:none;padding-inline:18px}.rev-row .rev.dup{display:none}}
+/* interruptor para la presentación (?demo=1) */
+.demo-switch{position:fixed;z-index:70;left:max(10px, env(safe-area-inset-left,0px));bottom:calc(86px + env(safe-area-inset-bottom,0px));display:flex;gap:2px;padding:3px;border-radius:999px;background:rgba(252,248,244,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 8px 22px -10px rgba(59,42,34,.55),inset 0 0 0 1px var(--line);font:500 .72rem/1 var(--f-body)}
+.demo-switch button{border:0;background:transparent;border-radius:999px;padding:0 11px;min-height:32px;color:var(--cocoa-2);cursor:pointer;font:inherit}
+.demo-switch button[aria-pressed="true"]{background:var(--cocoa);color:var(--cream)}
+@media (min-width:900px){.demo-switch{bottom:16px}}
+.footer .credit{color:rgba(246,239,231,.6)}
 </style>
 </head>
 <body>
@@ -447,30 +503,15 @@ p{margin:0}
 <!-- =================== NAV =================== -->
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="logo" href="#inicio" aria-label="Glow by Erika, inicio"><b>GLOW</b><small>BY ERIKA</small></a>
+    <a class="logo" href="#inicio" aria-label="Glow by Erika"><b>GLOW</b> <small>BY ERIKA</small></a>
     <nav class="nav-links" aria-label="Principal">
       <a href="#servicios">Servicios</a>
       <a href="#trabajos">Trabajos</a>
       <a href="#erika">Sobre Erika</a>
       <a href="#visitanos">Visítanos</a>
     </nav>
-    <div class="nav-end">
-      <a class="btn btn-glow btn-sm" href="#reserva" data-book>Reservar <span class="spark" aria-hidden="true">✦</span></a>
-      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú"><i aria-hidden="true"></i></button>
-    </div>
+    <a class="btn btn-glow btn-sm" href="#reserva" data-book>Reservar <span class="spark" aria-hidden="true">✦</span></a>
   </div>
-  <nav class="mnav" id="mnav" aria-label="Menú" hidden>
-    <a href="#servicios">Servicios</a>
-    <a href="#promo">Promo del mes</a>
-    <a href="#trabajos">Trabajos</a>
-    <a href="#erika">Sobre Erika</a>
-    <a href="#opiniones">Opiniones</a>
-    <a href="#visitanos">Visítanos</a>
-    <div class="mnav-contact">
-      <a class="btn btn-ghost btn-sm" href="tel:+34653302332">Llamar</a>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/34653302332?text=Hola%20Erika%2C%20quer%C3%ADa%20pedir%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-  </nav>
 </header>
 
 <main id="inicio">
@@ -485,14 +526,13 @@ p{margin:0}
         <a class="btn" href="#reserva" data-book>Reservar cita <span class="spark" aria-hidden="true">✦</span></a>
         <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
       </div>
-      <p class="open reveal d3" id="openNow" aria-live="polite"><span class="dot" aria-hidden="true"></span><span><strong>Abierto ahora</strong> · L–V 9:30–13:30 y 16:00–20:00 · S 9:30–13:30</span></p>
+      <p class="open reveal d3" id="openNow" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="openTxt">L–V 9:30–13:30 y 16:00–20:00 · S 9:30–13:30</span></p>
     </div>
     <div class="hero-media reveal d2">
-      <!-- FOTOS HERO: cambia el src de cada <img> -->
-      <div class="ph ph-main"><img src="img/hero-francesa-burdeos.webp" width="480" height="640" alt="Manicura francesa en burdeos con efecto glitter hecha en Glow by Erika" fetchpriority="high" decoding="async"></div>
-      <div class="ph ph-side"><img src="img/hero-chocolate-oro.webp" width="440" height="440" alt="Uñas semipermanentes en marrón chocolate con detalles de pan de oro" decoding="async"></div>
-      <div class="sticker sticker-1"><b>4,9 ✦</b>Primeras clientas felices</div>
-      <div class="sticker sticker-2"><b>25 €</b>Promo de noviembre</div>
+      <div class="ph ph-main"><img src="img/hero-francesa-burdeos.webp" width="480" height="640" alt="Manicura francesa en burdeos con efecto glitter hecha en Glow by Erika" fetchpriority="high"></div>
+      <div class="ph ph-side"><img src="img/hero-chocolate-oro.webp" width="440" height="440" alt="Uñas semipermanentes en marrón chocolate con detalles de pan de oro"></div>
+      <div class="sticker sticker-1" id="stickerFrom"><b>Desde 6 €</b>Cejas y depilación facial</div>
+      <div class="sticker sticker-2" id="stickerPromo" hidden><b id="stickerPromoPrice"></b><span id="stickerPromoTxt"></span></div>
     </div>
   </div>
 </section>
@@ -505,20 +545,20 @@ p{margin:0}
   </div>
 </div>
 
-<!-- =================== PROMO DEL MES (edita solo este bloque) =================== -->
-<section id="promo" aria-labelledby="promo-t">
+<!-- =================== PROMO DEL MES (se rellena desde js/config.js) =================== -->
+<section id="promo" aria-labelledby="promo-t" hidden>
   <div class="wrap">
-    <article class="promo-card reveal" data-promo-service="unas-gel">
-      <span class="eyebrow"><span aria-hidden="true">✦</span> Promo del mes · Noviembre</span>
-      <h2 id="promo-t">Uñas de Gel y <em>PolyAcrylGel</em></h2>
-      <div class="price-wrap"><span class="price-big">25 €</span></div>
-      <p>Uñas resistentes, finas y con acabado impecable a precio especial durante todo noviembre. Plazas limitadas, así que no lo dejes para el último día.</p>
-      <a class="btn" href="#reserva" data-book="unas-gel" data-promo-price="25">Quiero mi cita <span class="spark" aria-hidden="true">✦</span></a>
+    <article class="promo-card reveal">
+      <span class="eyebrow"><span aria-hidden="true">✦</span> <span id="promoEyebrow">Promo del mes</span></span>
+      <h2 id="promo-t"></h2>
+      <div class="price-wrap"><span class="price-big" id="promoPrice"></span></div>
+      <p id="promoTxt"></p>
+      <a class="btn" href="#reserva" id="promoBtn" data-book>Quiero mi cita <span class="spark" aria-hidden="true">✦</span></a>
     </article>
   </div>
 </section>
 
-<!-- =================== CARTA DE SERVICIOS =================== -->
+<!-- =================== CARTA DE SERVICIOS (se rellena desde js/config.js) =================== -->
 <section id="servicios" aria-labelledby="serv-t">
   <div class="wrap">
     <div class="sec-head">
@@ -526,99 +566,72 @@ p{margin:0}
       <h2 id="serv-t" class="reveal d1">Uñas, faciales y depilación en <span class="hl">Catarroja</span></h2>
       <p class="lead reveal d2">Precios claros y sin sorpresas. Elige tu servicio y resérvalo en un minuto.</p>
     </div>
-
     <div class="tabs" role="tablist" aria-label="Categorías de servicios" id="tabs"></div>
-
-    <div class="menu reveal" id="menu">
-      <div class="menu-cat" data-cat="faciales" data-label="Faciales" role="tabpanel">
-        <h3>Faciales <small>Piel luminosa, limpia y cuidada</small></h3>
-        <div class="svc" data-id="higiene" data-dur="60" data-price="30"><span class="svc-name">Higiene facial profunda</span><span class="svc-meta">60 min · limpieza, extracción y mascarilla</span><span class="svc-price">30 €</span><button class="btn btn-ghost" data-book="higiene">Reservar</button></div>
-        <div class="svc" data-id="vitc" data-dur="50" data-price="35"><span class="svc-name">Tratamiento vitamina C</span><span class="svc-meta">50 min · luminosidad y tono uniforme</span><span class="svc-price">35 €</span><button class="btn btn-ghost" data-book="vitc">Reservar</button></div>
-        <div class="svc" data-id="hialuronico" data-dur="50" data-price="35"><span class="svc-name">Ácido hialurónico</span><span class="svc-meta">50 min · hidratación intensa</span><span class="svc-price">35 €</span><button class="btn btn-ghost" data-book="hialuronico">Reservar</button></div>
-        <div class="svc" data-id="purificante" data-dur="50" data-price="35"><span class="svc-name">Tratamiento purificante</span><span class="svc-meta">50 min · pieles mixtas y grasas</span><span class="svc-price">35 €</span><button class="btn btn-ghost" data-book="purificante">Reservar</button></div>
-        <div class="svc" data-id="retinol" data-dur="60" data-price="40"><span class="svc-name">Retinol</span><span class="svc-meta">60 min · renovación y textura</span><span class="svc-price">40 €</span><button class="btn btn-ghost" data-book="retinol">Reservar</button></div>
-        <div class="svc" data-id="colageno" data-dur="60" data-price="40"><span class="svc-name">Colágeno</span><span class="svc-meta">60 min · firmeza y elasticidad</span><span class="svc-price">40 €</span><button class="btn btn-ghost" data-book="colageno">Reservar</button></div>
-      </div>
-
-      <div class="menu-cat" data-cat="manos" data-label="Manos" role="tabpanel">
-        <h3>Manos <small>Manicura y uñas</small></h3>
-        <div class="svc" data-id="semi" data-dur="45" data-price="20"><span class="svc-name">Manicura semipermanente</span><span class="svc-meta">45 min · color que dura semanas</span><span class="svc-price">20 €</span><button class="btn btn-ghost" data-book="semi">Reservar</button></div>
-        <div class="svc" data-id="poly" data-dur="90" data-price="28"><span class="svc-name">PolyAcrylGel</span><span class="svc-meta">90 min · ligeras y resistentes</span><span class="svc-price">28 €</span><button class="btn btn-ghost" data-book="poly">Reservar</button></div>
-        <div class="svc" data-id="unas-gel" data-dur="90" data-price="28"><span class="svc-name">Uñas de gel</span><span class="svc-meta">90 min · forma y largo a tu gusto</span><span class="svc-price">28 €</span><button class="btn btn-ghost" data-book="unas-gel">Reservar</button></div>
-        <div class="svc" data-id="relleno-gel" data-dur="75" data-price="25"><span class="svc-name">Relleno de gel</span><span class="svc-meta">75 min</span><span class="svc-price">25 €</span><button class="btn btn-ghost" data-book="relleno-gel">Reservar</button></div>
-        <div class="svc" data-id="relleno-poly" data-dur="75" data-price="25"><span class="svc-name">Relleno de PolyAcrylGel</span><span class="svc-meta">75 min</span><span class="svc-price">25 €</span><button class="btn btn-ghost" data-book="relleno-poly">Reservar</button></div>
-      </div>
-
-      <div class="menu-cat" data-cat="pies" data-label="Pies" role="tabpanel">
-        <h3>Pies <small>Pedicura</small></h3>
-        <div class="svc" data-id="pedi" data-dur="60" data-price="20" data-price-label="20–25 €"><span class="svc-name">Pedicura completa</span><span class="svc-meta">60 min · según acabado</span><span class="svc-price">20–25 €</span><button class="btn btn-ghost" data-book="pedi">Reservar</button></div>
-        <div class="svc" data-id="pedi-unas" data-dur="40" data-price="15" data-price-label="15–20 €"><span class="svc-name">Pedicura solo uñas</span><span class="svc-meta">40 min · según acabado</span><span class="svc-price">15–20 €</span><button class="btn btn-ghost" data-book="pedi-unas">Reservar</button></div>
-      </div>
-
-      <div class="menu-cat" data-cat="dep-facial" data-label="Depilación facial" role="tabpanel">
-        <h3>Depilación facial</h3>
-        <div class="svc" data-id="cejas" data-dur="15" data-price="6"><span class="svc-name">Cejas</span><span class="svc-meta">15 min · diseño incluido</span><span class="svc-price">6 €</span><button class="btn btn-ghost" data-book="cejas">Reservar</button></div>
-        <div class="svc" data-id="ceja-labio" data-dur="20" data-price="9"><span class="svc-name">Ceja y labio</span><span class="svc-meta">20 min</span><span class="svc-price">9 €</span><button class="btn btn-ghost" data-book="ceja-labio">Reservar</button></div>
-        <div class="svc" data-id="facial-completa" data-dur="30" data-price="12"><span class="svc-name">Facial completa</span><span class="svc-meta">30 min</span><span class="svc-price">12 €</span><button class="btn btn-ghost" data-book="facial-completa">Reservar</button></div>
-      </div>
-
-      <div class="menu-cat" data-cat="dep-corporal" data-label="Depilación con cera" role="tabpanel">
-        <h3>Depilación corporal con cera</h3>
-        <div class="svc" data-id="medias" data-dur="30" data-price="12"><span class="svc-name">Medias piernas</span><span class="svc-meta">30 min</span><span class="svc-price">12 €</span><button class="btn btn-ghost" data-book="medias">Reservar</button></div>
-        <div class="svc" data-id="piernas" data-dur="45" data-price="20"><span class="svc-name">Piernas completas</span><span class="svc-meta">45 min</span><span class="svc-price">20 €</span><button class="btn btn-ghost" data-book="piernas">Reservar</button></div>
-        <div class="svc" data-id="ingles" data-dur="15" data-price="8"><span class="svc-name">Ingles normales</span><span class="svc-meta">15 min</span><span class="svc-price">8 €</span><button class="btn btn-ghost" data-book="ingles">Reservar</button></div>
-        <div class="svc" data-id="ingles-int" data-dur="30" data-price="15"><span class="svc-name">Ingles integrales</span><span class="svc-meta">30 min</span><span class="svc-price">15 €</span><button class="btn btn-ghost" data-book="ingles-int">Reservar</button></div>
-        <div class="svc" data-id="axilas" data-dur="15" data-price="6"><span class="svc-name">Axilas</span><span class="svc-meta">15 min</span><span class="svc-price">6 €</span><button class="btn btn-ghost" data-book="axilas">Reservar</button></div>
-        <div class="svc" data-id="brazos" data-dur="25" data-price="12"><span class="svc-name">Brazos</span><span class="svc-meta">25 min</span><span class="svc-price">12 €</span><button class="btn btn-ghost" data-book="brazos">Reservar</button></div>
-      </div>
-
-      <div class="menu-cat" data-cat="packs" data-label="Packs" role="tabpanel">
-        <h3>Packs <small>Para ahorrar un poquito</small></h3>
-        <div class="svc" data-id="pack-piernas" data-dur="60" data-price="27" data-price-label="desde 27 €"><span class="svc-name">Piernas completas + ingles</span><span class="svc-meta">60 min</span><span class="svc-price">desde 27 €</span><button class="btn btn-ghost" data-book="pack-piernas">Reservar</button></div>
-        <div class="svc" data-id="pack-cuerpo" data-dur="90" data-price="35"><span class="svc-name">Pack cuerpo completo</span><span class="svc-meta">90 min</span><span class="svc-price">35 €</span><button class="btn btn-ghost" data-book="pack-cuerpo">Reservar</button></div>
-      </div>
-
-      <div class="menu-cat" data-cat="masajes" data-label="Masajes y rituales" role="tabpanel">
-        <h3>Masajes y rituales</h3>
-        <div class="svc" data-id="ritual" data-dur="60" data-price="60"><span class="svc-name">Ritual Glow</span><span class="svc-meta">60 min · facial + masaje relajante</span><span class="svc-price">60 €</span><button class="btn btn-ghost" data-book="ritual">Reservar</button></div>
-        <div class="svc" data-id="masaje" data-dur="30" data-price="30"><span class="svc-name">Masaje localizado</span><span class="svc-meta">30 min · espalda, cuello o piernas</span><span class="svc-price">30 €</span><button class="btn btn-ghost" data-book="masaje">Reservar</button></div>
-        <div class="svc" data-id="madero" data-dur="60" data-price="60"><span class="svc-name">Maderoterapia</span><span class="svc-meta">60 min · moldea y drena</span><span class="svc-price">60 €</span><button class="btn btn-ghost" data-book="madero">Reservar</button></div>
-      </div>
-    </div>
+    <div class="menu reveal" id="menu"></div>
     <p class="menu-note">¿Dudas sobre qué tratamiento te va mejor? Escríbeme y lo vemos juntas.</p>
   </div>
 </section>
 
-<!-- =================== RESERVA =================== -->
+<!-- =================== RESERVA (dos versiones: whatsapp / booksy) =================== -->
 <section id="reserva" class="booking" aria-labelledby="bk-t">
   <div class="wrap">
-    <div class="sec-head" style="text-align:center;justify-items:center">
-      <span class="eyebrow reveal"><span aria-hidden="true">✦</span> Reserva online</span>
-      <h2 id="bk-t" class="reveal d1">Tu cita en <span class="hl">cuatro toques</span></h2>
-      <p class="lead reveal d2">Sin esperar a que te conteste un WhatsApp. Ves los huecos libres y eliges el que mejor te viene.</p>
-    </div>
-
-    <div class="bk reveal" id="bk">
-      <div class="bk-top">
-        <ol class="steps" id="steps">
-          <li class="active"><span>1</span>Servicio</li>
-          <li><span>2</span>Día</li>
-          <li><span>3</span>Hora</li>
-          <li><span>4</span>Confirmar</li>
+    <div class="bkc reveal">
+      <div class="bkc-copy">
+        <span class="eyebrow" data-mode="whatsapp"><span aria-hidden="true">✦</span> Reserva por WhatsApp</span>
+        <span class="eyebrow" data-mode="booksy"><span aria-hidden="true">✦</span> Reserva online</span>
+        <h2 id="bk-t">Tu cita en <span class="hl" data-mode="whatsapp">un mensaje</span><span class="hl" data-mode="booksy">un minuto</span></h2>
+        <p class="lead" data-mode="whatsapp">Elige tu servicio y escríbeme por WhatsApp: el mensaje ya va escrito, solo tienes que enviarlo.</p>
+        <p class="lead" data-mode="booksy">Sin esperar a que te conteste un WhatsApp. Ves los huecos libres de mi agenda y eliges el que mejor te viene.</p>
+        <ol class="bkc-steps" data-mode="whatsapp">
+          <li><span>1</span><div><b>Eliges tu servicio</b><small>En la carta o con el botón de abajo</small></div></li>
+          <li><span>2</span><div><b>Me escribes</b><small>Se abre WhatsApp con el servicio y el precio</small></div></li>
+          <li><span>3</span><div><b>Te confirmo el hueco</b><small>Te propongo día y hora y quedamos</small></div></li>
         </ol>
-        <div class="bar" aria-hidden="true"><i id="bar"></i></div>
-      </div>
-      <div class="bk-body" id="bkBody" aria-live="polite"></div>
-      <div class="bk-foot" id="bkFoot">
-        <span class="mini" id="bkMini">Elige un servicio para empezar</span>
-        <div class="btns">
-          <button class="btn btn-ghost btn-sm" id="bkBack" type="button" hidden>Atrás</button>
-          <button class="btn btn-sm" id="bkNext" type="button" disabled>Siguiente</button>
+        <ol class="bkc-steps" data-mode="booksy">
+          <li><span>1</span><div><b>Elige tu servicio</b><small>Uñas, faciales, depilación, masajes…</small></div></li>
+          <li><span>2</span><div><b>Escoge día y hora</b><small>Solo verás los huecos que están libres</small></div></li>
+          <li><span>3</span><div><b>Recibe la confirmación</b><small>Y un recordatorio el día antes en tu móvil</small></div></li>
+        </ol>
+        <div class="bkc-ctas" data-mode="whatsapp">
+          <a class="btn" href="#reserva" data-book>Escribir por WhatsApp <span class="spark" aria-hidden="true">✦</span></a>
+          <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
         </div>
+        <div class="bkc-ctas" data-mode="booksy">
+          <a class="btn" href="#reserva" data-book>Reservar cita <span class="spark" aria-hidden="true">✦</span></a>
+          <a class="btn btn-ghost" href="#" data-wa target="_blank" rel="noopener">Prefiero WhatsApp</a>
+        </div>
+        <p class="bkc-note" data-mode="whatsapp">WhatsApp: <a href="tel:+34653302332">653 30 23 32</a></p>
+        <p class="bkc-note" data-mode="booksy">Reservas gestionadas con Booksy · Puedes cambiar o cancelar tu cita desde la app</p>
+      </div>
+      <div class="bkc-media">
+        <div class="ph"><img src="img/unas-nude-topos.webp" width="480" height="480" loading="lazy" alt="Uñas nude con francesa marrón y topos"></div>
+        <div class="bkc-ticket" data-mode="booksy" aria-hidden="true"><small>Vista de ejemplo · Próximo hueco libre</small><b id="nextSlot">Hoy · 17:30</b><span>Manicura semipermanente</span></div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Vista de ejemplo de la agenda en Booksy (solo modo "booksy" mientras no haya booksyUrl) -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-bg" data-close></div>
+  <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="sheet-t" tabindex="-1">
+    <button class="icon-btn sheet-x" type="button" data-close aria-label="Cerrar">✕</button>
+    <span class="demo-tag" id="sheet-t">Vista de ejemplo de tu agenda en Booksy</span>
+    <ol class="steps" id="agSteps">
+      <li class="active"><span>1</span>Servicio</li>
+      <li><span>2</span>Día</li>
+      <li><span>3</span>Hora</li>
+      <li><span>4</span>Confirmar</li>
+    </ol>
+    <div class="bar" aria-hidden="true"><i id="agBar"></i></div>
+    <div id="agBody" aria-live="polite"></div>
+    <div class="sheet-foot" id="agFoot">
+      <button class="btn btn-ghost btn-sm" id="agBack" type="button" hidden>Atrás</button>
+      <button class="btn btn-sm" id="agNext" type="button" disabled>Siguiente</button>
+    </div>
+    <a class="sheet-wa" id="sheetWa" href="#" target="_blank" rel="noopener">Prefiero WhatsApp</a>
+  </div>
+</div>
 
 <!-- =================== GALERÍA =================== -->
 <section id="trabajos" aria-labelledby="gal-t">
@@ -628,22 +641,16 @@ p{margin:0}
       <h2 id="gal-t" class="reveal d1">Lo que sale de <span class="hl">mis manos</span></h2>
     </div>
     <div class="tabs" role="group" aria-label="Filtrar trabajos" id="galTabs">
-      <button class="tab" aria-pressed="true" data-f="all">Todo</button>
-      <button class="tab" aria-pressed="false" data-f="unas">Uñas</button>
-      <button class="tab" aria-pressed="false" data-f="maquillaje">Maquillaje</button>
-      <button class="tab" aria-pressed="false" data-f="faciales">Faciales</button>
-      <button class="tab" aria-pressed="false" data-f="corporal">Corporal</button>
+      <button class="tab" type="button" aria-pressed="true" data-f="all">Todo</button>
+      <button class="tab" type="button" aria-pressed="false" data-f="unas">Uñas</button>
+      <button class="tab" type="button" aria-pressed="false" data-f="maquillaje">Maquillaje</button>
     </div>
-    <!-- GALERÍA: dentro de cada .ph pon <img src="img/..." alt="..." loading="lazy"> y borra data-label -->
     <div class="gallery" id="gallery">
-      <figure class="t" data-c="unas"><div class="ph"><img src="img/hero-francesa-burdeos.webp" width="480" height="640" loading="lazy" decoding="async" alt="Manicura francesa burdeos con glitter"></div></figure>
-      <figure class="t" data-c="maquillaje"><div class="ph"><img src="img/maquillaje-evento.webp" width="360" height="540" loading="lazy" decoding="async" alt="Maquillaje de evento en tonos cálidos con recogido ondulado"></div></figure>
-      <figure data-c="unas"><div class="ph"><img src="img/unas-nude-topos.webp" width="480" height="480" loading="lazy" decoding="async" alt="Uñas nude con francesa marrón y topos"></div></figure>
-      <figure data-c="unas"><div class="ph"><img src="img/unas-chocolate-oro.webp" width="480" height="480" loading="lazy" decoding="async" alt="Uñas marrón chocolate con pan de oro"></div></figure>
-      <figure class="w" data-c="corporal"><div class="ph"><img src="img/maderoterapia.webp" width="640" height="360" loading="lazy" decoding="async" alt="Kit de maderoterapia y cremas reductoras del centro"></div></figure>
-      <figure data-c="unas"><div class="ph"><img src="img/unas-gel-estrellas.webp" width="206" height="306" loading="lazy" decoding="async" alt="Uñas de gel rosa con estrellas"></div></figure>
-      <figure data-c="faciales"><div class="ph" data-label="foto: facial" role="img" aria-label="Tratamiento facial en cabina"></div></figure>
-      <figure class="w" data-c="faciales"><div class="ph" data-label="foto: facial en cabina" role="img" aria-label="Piel luminosa tras un tratamiento facial"></div></figure>
+      <figure class="t" data-c="unas"><div class="ph"><img src="img/hero-francesa-burdeos.webp" width="480" height="640" loading="lazy" alt="Manicura francesa burdeos con glitter"></div></figure>
+      <figure class="t" data-c="maquillaje"><div class="ph"><img src="img/maquillaje-evento.webp" width="360" height="540" loading="lazy" alt="Maquillaje de evento en tonos cálidos con recogido ondulado"></div></figure>
+      <figure data-c="unas"><div class="ph"><img src="img/unas-nude-topos.webp" width="480" height="480" loading="lazy" alt="Uñas nude con francesa marrón y topos"></div></figure>
+      <figure class="t" data-c="unas"><div class="ph"><img src="img/unas-gel-estrellas.webp" width="206" height="306" loading="lazy" alt="Uñas de gel rosa con estrellas"></div></figure>
+      <figure data-c="unas"><div class="ph"><img src="img/unas-chocolate-oro.webp" width="480" height="480" loading="lazy" alt="Uñas marrón chocolate con pan de oro"></div></figure>
     </div>
   </div>
 </section>
@@ -652,7 +659,7 @@ p{margin:0}
 <section id="erika" class="about" aria-labelledby="about-t">
   <div class="wrap">
     <div class="about-photo reveal">
-      <div class="ph"><img src="img/erika.webp" width="150" height="150" loading="lazy" decoding="async" alt="Erika Codoñer, fundadora de Glow by Erika"></div>
+      <div class="ph"><img src="img/erika.webp" width="150" height="150" loading="lazy" alt="Erika Codoñer, fundadora de Glow by Erika"></div>
       <div class="badge"><span><b>2026</b>abierto en<br>Catarroja</span></div>
     </div>
     <div class="about-copy">
@@ -668,33 +675,27 @@ p{margin:0}
 <!-- =================== PRODUCTOS =================== -->
 <section id="productos" aria-labelledby="prod-t">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow reveal"><span aria-hidden="true">✦</span> En el centro</span>
-      <h2 id="prod-t" class="reveal d1">Lleva el glow <span class="hl">a casa</span></h2>
-      <p class="lead reveal d2">Los productos que uso en cabina y te recomiendo para mantener los resultados. Pregúntame en tu próxima cita.</p>
-    </div>
-    <div class="products">
-      <article class="prod reveal"><div class="ph" data-label="foto: producto 1" role="img" aria-label="Sérum facial"></div><div><b>Sérum vitamina C</b><small>Luminosidad diaria</small></div></article>
-      <article class="prod reveal d1"><div class="ph" data-label="foto: producto 2" role="img" aria-label="Crema hidratante"></div><div><b>Crema hidratante</b><small>Con ácido hialurónico</small></div></article>
-      <article class="prod reveal d2"><div class="ph" data-label="foto: producto 3" role="img" aria-label="Aceite de cutículas"></div><div><b>Aceite de cutículas</b><small>Para que tu manicura dure más</small></div></article>
-      <article class="prod reveal d3"><div class="ph" data-label="foto: producto 4" role="img" aria-label="Bruma facial"></div><div><b>Bruma facial</b><small>Frescor en cualquier momento</small></div></article>
+    <div class="shop reveal">
+      <div class="ph shop-img"><img src="img/maderoterapia.webp" width="640" height="360" loading="lazy" alt="Kit de maderoterapia y cremas reductoras que Erika usa en cabina"></div>
+      <div class="shop-copy">
+        <span class="eyebrow"><span aria-hidden="true">✦</span> En el centro</span>
+        <h2 id="prod-t">Lleva el glow <span class="hl">a casa</span></h2>
+        <p class="lead">Trabajo con productos profesionales que también puedes llevarte para mantener los resultados entre cita y cita. Pregúntame y te recomiendo lo que mejor va con tu piel.</p>
+        <a class="btn btn-ghost" href="https://www.instagram.com/glow.by.erika/" target="_blank" rel="noopener" data-ig>Ver productos en Instagram</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- =================== OPINIONES =================== -->
+<!-- =================== OPINIONES (se rellena desde js/config.js) =================== -->
 <section id="opiniones" aria-labelledby="rev-t">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal"><span aria-hidden="true">✦</span> Opiniones</span>
-      <h2 id="rev-t" class="reveal d1">Así se van mis clientas</h2>
-      <p class="lead reveal d2">Opiniones de ejemplo para la demo. Aquí irán las reseñas reales de Google.</p>
+      <h2 id="rev-t" class="reveal d1">¿Ya has venido? <span class="hl">Cuéntanos qué tal</span></h2>
+      <p class="lead reveal d2" id="revLead">Glow by Erika acaba de abrir y cada opinión ayuda a que más gente de Catarroja nos encuentre.</p>
     </div>
-    <div class="reviews">
-      <article class="rev reveal"><span class="tag">Ejemplo</span><span class="stars" aria-label="5 de 5">★★★★★</span><p>“Me hice el semi y me ha durado tres semanas perfecto. Erika es un amor y el centro es precioso.”</p><footer>Clienta de ejemplo · Uñas</footer></article>
-      <article class="rev reveal d1"><span class="tag">Ejemplo</span><span class="stars" aria-label="5 de 5">★★★★★</span><p>“La higiene facial más completa que me han hecho. Salí con la piel brillando de verdad.”</p><footer>Clienta de ejemplo · Faciales</footer></article>
-      <article class="rev reveal d2"><span class="tag">Ejemplo</span><span class="stars" aria-label="5 de 5">★★★★★</span><p>“Reservé desde el móvil en un minuto, sin esperar respuesta. Así da gusto.”</p><footer>Clienta de ejemplo · Depilación</footer></article>
-    </div>
+    <div id="revBox"></div>
   </div>
 </section>
 
@@ -705,19 +706,11 @@ p{margin:0}
       <span class="eyebrow"><span aria-hidden="true">✦</span> Visítanos</span>
       <h2 id="vis-t">Te espero en el centro de Catarroja</h2>
       <address>Carrer de la Pau, 2<br>46470 Catarroja, Valencia</address>
-      <dl class="hours" id="hours">
-        <div data-d="1"><dt>Lunes</dt><dd>9:30–13:30 · 16:00–20:00</dd></div>
-        <div data-d="2"><dt>Martes</dt><dd>9:30–13:30 · 16:00–20:00</dd></div>
-        <div data-d="3"><dt>Miércoles</dt><dd>9:30–13:30 · 16:00–20:00</dd></div>
-        <div data-d="4"><dt>Jueves</dt><dd>9:30–13:30 · 16:00–20:00</dd></div>
-        <div data-d="5"><dt>Viernes</dt><dd>9:30–13:30 · 16:00–20:00</dd></div>
-        <div data-d="6"><dt>Sábado</dt><dd>9:30–13:30</dd></div>
-        <div data-d="0"><dt>Domingo</dt><dd>Cerrado</dd></div>
-      </dl>
-      <div class="phone"><a class="num" href="tel:+34653302332">653 30 23 32</a><a class="btn btn-sm" href="tel:+34653302332">Llamar</a><button class="btn btn-ghost btn-sm" id="copyTel" type="button">Copiar</button></div>
+      <dl class="hours" id="hours"></dl>
+      <div class="phone"><a href="tel:+34653302332" aria-label="Llamar al 653 30 23 32"><strong>653 30 23 32</strong></a><button class="btn btn-ghost btn-sm" id="copyTel" type="button">Copiar</button></div>
       <div class="contact-btns">
-        <a class="btn btn-wa" href="https://wa.me/34653302332?text=Hola%20Erika%2C%20quer%C3%ADa%20pedir%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/glow.by.erika/" target="_blank" rel="noopener">Instagram @glow.by.erika</a>
+        <a class="btn btn-wa" href="#" data-wa="info" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/glow.by.erika/" target="_blank" rel="noopener" data-ig>Instagram @glow.by.erika</a>
       </div>
     </div>
     <div class="map reveal d1" id="map">
@@ -735,7 +728,7 @@ p{margin:0}
 <!-- =================== FOOTER =================== -->
 <footer class="footer">
   <div class="wrap">
-    <a class="logo" href="#inicio" aria-label="Glow by Erika, volver arriba"><b>GLOW</b><small>BY ERIKA</small></a>
+    <a class="logo" href="#inicio" aria-label="Glow by Erika"><b>GLOW</b> <small>BY ERIKA</small></a>
     <nav class="foot-links" aria-label="Pie de página">
       <a href="#servicios">Servicios</a><a href="#reserva">Reservar</a><a href="#trabajos">Trabajos</a><a href="#erika">Sobre Erika</a><a href="#visitanos">Contacto</a>
     </nav>
@@ -744,288 +737,20 @@ p{margin:0}
       <a href="#aviso-legal">Aviso legal</a>
       <a href="#privacidad">Política de privacidad</a>
       <a href="#cookies">Cookies</a>
+      <a class="credit" href="https://instagram.com/rgdev.studio" target="_blank" rel="noopener">Diseño web: rgdev.studio</a>
     </div>
   </div>
 </footer>
 
 <a class="btn btn-glow fab" id="fab" href="#reserva" data-book>Reservar cita <span class="spark" aria-hidden="true">✦</span></a>
 
-<script>
-(function(){
-  "use strict";
-  // ---- Horario (minutos desde medianoche). 0 = domingo. CONFIRMAR con Erika ----
-  var SCHEDULE = {1:[[570,810],[960,1200]],2:[[570,810],[960,1200]],3:[[570,810],[960,1200]],4:[[570,810],[960,1200]],5:[[570,810],[960,1200]],6:[[570,810]],0:[]};
-  var DAYS_ES = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
-  var DAYS_SHORT = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
-  var MONTHS = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-  function hm(m){var h=Math.floor(m/60),mi=m%60;return h+":"+(mi<10?"0":"")+mi;}
-  function $(s,c){return (c||document).querySelector(s);}
-  function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
-  var reduceMotion=matchMedia("(prefers-reduced-motion: reduce)");
-  var isMobile=matchMedia("(max-width: 639px)");
+<!-- Interruptor para la presentación: solo aparece con ?demo=1 -->
+<div class="demo-switch" id="demoSwitch" role="group" aria-label="Versión de reservas" hidden>
+  <button type="button" data-set-mode="whatsapp">Básica</button>
+  <button type="button" data-set-mode="booksy">Con citas</button>
+</div>
 
-  // ---- Hora de Madrid ----
-  function madridNow(){
-    try{
-      var p=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Madrid",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
-      var o={};p.forEach(function(x){o[x.type]=x.value;});
-      var d=new Date(+o.year,+o.month-1,+o.day);
-      return {date:d,min:(+o.hour%24)*60+(+o.minute)};
-    }catch(e){var n=new Date();return {date:new Date(n.getFullYear(),n.getMonth(),n.getDate()),min:n.getHours()*60+n.getMinutes()};}
-  }
-
-  // ---- Menú móvil ----
-  var nav=$("#nav"),menuBtn=$("#menuBtn"),mnav=$("#mnav");
-  function setMenu(open){
-    mnav.hidden=!open;nav.classList.toggle("open",open);document.body.classList.toggle("menu-open",open);
-    menuBtn.setAttribute("aria-expanded",open);menuBtn.setAttribute("aria-label",open?"Cerrar menú":"Abrir menú");
-  }
-  menuBtn.addEventListener("click",function(){setMenu(mnav.hidden);});
-  $$("a",mnav).forEach(function(a){a.addEventListener("click",function(){setMenu(false);});});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!mnav.hidden){setMenu(false);menuBtn.focus();}});
-  matchMedia("(min-width: 900px)").addEventListener("change",function(e){if(e.matches)setMenu(false);});
-
-  // ---- Abierto ahora ----
-  (function(){
-    var now=madridNow(),dow=now.date.getDay(),el=$("#openNow"),txt;
-    var today=SCHEDULE[dow],open=null,next=null;
-    today.forEach(function(r){ if(now.min>=r[0]&&now.min<r[1]) open=r; else if(!next&&now.min<r[0]) next=r; });
-    if(open){ txt="<strong>Abierto ahora</strong> · hasta las "+hm(open[1]); }
-    else{
-      el.classList.add("closed");
-      if(next){ txt="<strong>Cerrado ahora</strong> · abre hoy a las "+hm(next[0]); }
-      else{ for(var i=1;i<8;i++){var d=(dow+i)%7; if(SCHEDULE[d].length){ txt="<strong>Cerrado ahora</strong> · abre "+(i===1?"mañana":"el "+DAYS_ES[d])+" a las "+hm(SCHEDULE[d][0][0]); break;} } }
-    }
-    el.querySelector("span:last-child").innerHTML=txt+' · L–V 9:30–13:30 y 16:00–20:00 · S 9:30–13:30';
-    var row=$('#hours [data-d="'+dow+'"]'); if(row) row.classList.add("today");
-  })();
-
-  // ---- Servicios (leídos de la carta en HTML) ----
-  var CATS=$$(".menu-cat").map(function(c){return {id:c.dataset.cat,label:c.dataset.label,el:c};});
-  var SVC={},SVC_LIST=[];
-  CATS.forEach(function(c){
-    $$(".svc",c.el).forEach(function(s){
-      var o={id:s.dataset.id,cat:c.id,name:$(".svc-name",s).textContent,dur:+s.dataset.dur,price:+s.dataset.price,priceLabel:s.dataset.priceLabel||(s.dataset.price+" €")};
-      SVC[o.id]=o;SVC_LIST.push(o);
-    });
-  });
-  // Promo: precio especial
-  var promoBtn=$("[data-promo-price]");
-  var PROMO={ids:["unas-gel","poly"],price:promoBtn?+promoBtn.dataset.promoPrice:null};
-  function priceOf(s){ return (PROMO.price&&PROMO.ids.indexOf(s.id)>-1)? {label:PROMO.price+" € · promo",promo:true} : {label:s.priceLabel,promo:false}; }
-
-  // Centra una pestaña dentro de su carril horizontal (móvil)
-  function revealTab(b){
-    var rail=b.parentNode; if(rail.scrollWidth<=rail.clientWidth) return;
-    var x=b.offsetLeft-(rail.clientWidth-b.offsetWidth)/2;
-    rail.scrollTo({left:Math.max(0,x),behavior:reduceMotion.matches?"auto":"smooth"});
-  }
-
-  // ---- Pestañas de la carta ----
-  var tabs=$("#tabs");
-  CATS.forEach(function(c,i){
-    var b=document.createElement("button");
-    b.className="tab";b.type="button";b.setAttribute("role","tab");b.id="tab-"+c.id;b.textContent=c.label;
-    b.setAttribute("aria-selected",i===0?"true":"false");b.setAttribute("aria-controls","cat-"+c.id);
-    c.el.id="cat-"+c.id;c.el.setAttribute("aria-labelledby",b.id);c.el.hidden=i!==0;
-    b.addEventListener("click",function(){
-      $$(".tab",tabs).forEach(function(t){t.setAttribute("aria-selected","false");});
-      b.setAttribute("aria-selected","true");
-      CATS.forEach(function(x){x.el.hidden=x.id!==c.id;});
-      revealTab(b);
-    });
-    tabs.appendChild(b);
-  });
-
-  // ---- Galería ----
-  $$("#galTabs .tab").forEach(function(b){
-    b.addEventListener("click",function(){
-      $$("#galTabs .tab").forEach(function(t){t.setAttribute("aria-pressed","false");});
-      b.setAttribute("aria-pressed","true");
-      var f=b.dataset.f;
-      $$("#gallery figure").forEach(function(fg){fg.hidden=!(f==="all"||fg.dataset.c===f);});
-      revealTab(b);
-    });
-  });
-
-  // ================= RESERVA =================
-  var st={step:1,svc:null,cat:CATS[0].id,date:null,time:null,weekOffset:0,code:null,name:"",phone:"",notes:""};
-  var body=$("#bkBody"),next=$("#bkNext"),back=$("#bkBack"),mini=$("#bkMini"),bar=$("#bar"),foot=$("#bkFoot");
-  var today=madridNow();
-  function ds(d){return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();}
-  function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x;}
-  function monday(d){var x=new Date(d);var k=(x.getDay()+6)%7;x.setDate(x.getDate()-k);return x;}
-  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0)%100;}
-  function isPast(d){return d<today.date;}
-  function isToday(d){return ds(d)===ds(today.date);}
-  function slotsFor(d,dur){
-    var out=[];(SCHEDULE[d.getDay()]||[]).forEach(function(r){
-      for(var t=r[0];t+dur<=r[1];t+=30){
-        var busy=hash(ds(d)+"|"+t)<34 || (isToday(d)&&t<=today.min+30);
-        out.push({t:t,busy:busy});
-      }
-    });return out;
-  }
-  function freeCount(d){ return st.svc? slotsFor(d,SVC[st.svc].dur).filter(function(s){return !s.busy;}).length : 0; }
-  function fmtDate(d){return DAYS_ES[d.getDay()]+" "+d.getDate()+" de "+MONTHS[d.getMonth()];}
-
-  function setSteps(){
-    $$("#steps li").forEach(function(li,i){li.classList.toggle("active",i+1===st.step);li.classList.toggle("done",i+1<st.step||st.step===5);});
-    bar.style.width=(Math.min(st.step,4)/4*100)+"%";
-    if(st.step===5){bar.style.width="100%";}
-  }
-  function updateFoot(){
-    foot.hidden=st.step===5;
-    back.hidden=st.step<=1;
-    var ok=(st.step===1&&st.svc)||(st.step===2&&st.date)||(st.step===3&&st.time!==null)||st.step===4;
-    next.disabled=!ok;
-    next.textContent=st.step===4?"Confirmar reserva":"Siguiente";
-    var bits=[];if(st.svc)bits.push(SVC[st.svc].name);if(st.date)bits.push(DAYS_SHORT[st.date.getDay()]+" "+st.date.getDate());if(st.time!==null)bits.push(hm(st.time));
-    mini.textContent=bits.length?bits.join(" · "):"Elige un servicio para empezar";
-  }
-  // En móvil, al cambiar de paso, lleva al inicio de la tarjeta para no quedarse a media pantalla
-  function scrollToCard(){
-    var bkEl=$("#bk"),r=bkEl.getBoundingClientRect(),navH=nav.offsetHeight+8;
-    if(r.top<navH||r.top>window.innerHeight*.4){
-      window.scrollTo({top:r.top+window.scrollY-navH,behavior:reduceMotion.matches?"auto":"smooth"});
-    }
-  }
-  function render(focus){
-    setSteps();updateFoot();
-    var h="";
-    if(st.step===1){
-      h='<div class="pane"><h3>¿Qué te apetece?</h3><div class="tabs" role="group" aria-label="Categoría">';
-      CATS.forEach(function(c){h+='<button type="button" class="tab" data-bcat="'+c.id+'" aria-pressed="'+(c.id===st.cat)+'">'+c.label+'</button>';});
-      h+='</div><div class="opt-list">';
-      SVC_LIST.filter(function(s){return s.cat===st.cat;}).forEach(function(s){
-        var p=priceOf(s);
-        h+='<button type="button" class="opt" data-svc="'+s.id+'" aria-pressed="'+(st.svc===s.id)+'"><b>'+s.name+'</b><small>'+s.dur+' min'+(p.promo?' · ✦ promo de noviembre':'')+'</small><span class="p">'+p.label.replace(" · promo","")+'</span></button>';
-      });
-      h+='</div></div>';
-    }
-    if(st.step===2){
-      var m=addDays(monday(today.date),st.weekOffset*7);
-      var end=addDays(m,6);
-      var label=(m.getMonth()===end.getMonth())? m.getDate()+"–"+end.getDate()+" "+MONTHS[m.getMonth()] : m.getDate()+" "+MONTHS[m.getMonth()].slice(0,3)+" – "+end.getDate()+" "+MONTHS[end.getMonth()].slice(0,3);
-      h='<div class="pane"><h3>¿Qué día te viene bien?</h3><div class="week-nav"><button type="button" class="icon-btn" data-week="-1" aria-label="Semana anterior" '+(st.weekOffset<=0?"disabled":"")+'>‹</button><strong>'+label+'</strong><button type="button" class="icon-btn" data-week="1" aria-label="Semana siguiente" '+(st.weekOffset>=3?"disabled":"")+'>›</button></div><div class="days">';
-      for(var i=0;i<7;i++){
-        var d=addDays(m,i),closed=!SCHEDULE[d.getDay()].length,past=isPast(d),free=(!closed&&!past)?freeCount(d):0;
-        var dis=closed||past||free===0;
-        var em=closed?"Cerrado":past?"":(free===0?"Completo":(free<=3?"Últimos":free+'<span class="w"> libres</span>'));
-        h+='<button type="button" class="day" data-date="'+ds(d)+'" '+(dis?"disabled":"")+' aria-pressed="'+(st.date&&ds(st.date)===ds(d))+'" aria-label="'+fmtDate(d)+(dis?", no disponible":", "+free+" huecos libres")+'"><small>'+DAYS_SHORT[d.getDay()]+'</small><b>'+d.getDate()+'</b><em>'+em+'</em></button>';
-      }
-      h+='</div><p class="hint">Duración del servicio: '+SVC[st.svc].dur+' min. Los domingos descanso.</p></div>';
-    }
-    if(st.step===3){
-      var sl=slotsFor(st.date,SVC[st.svc].dur);
-      var morning=sl.filter(function(s){return s.t<840;}),afternoon=sl.filter(function(s){return s.t>=840;});
-      function grp(t,arr){ if(!arr.length)return ""; var g='<div class="slot-group"><h4>'+t+'</h4><div class="slots">'; arr.forEach(function(s){g+='<button type="button" class="slot" data-t="'+s.t+'" '+(s.busy?'disabled aria-label="'+hm(s.t)+', ocupado"':'')+' aria-pressed="'+(st.time===s.t)+'">'+hm(s.t)+'</button>';}); return g+'</div></div>'; }
-      h='<div class="pane"><h3>Elige tu hora</h3><p class="hint" style="text-transform:none">'+fmtDate(st.date).replace(/^./,function(c){return c.toUpperCase();})+'</p>'+grp("Mañana",morning)+grp("Tarde",afternoon)+'<div class="legend"><span><i></i>Libre</span><span><i class="b"></i>Ocupado</span></div></div>';
-    }
-    if(st.step===4){
-      var s=SVC[st.svc],p=priceOf(s);
-      h='<div class="pane"><h3>Revisa y confirma</h3><dl class="summary"><div><dt>Servicio</dt><dd>'+s.name+'</dd></div><div><dt>Día</dt><dd>'+fmtDate(st.date)+'</dd></div><div><dt>Hora</dt><dd>'+hm(st.time)+' – '+hm(st.time+s.dur)+'</dd></div><div><dt>Duración</dt><dd>'+s.dur+' min</dd></div><div class="total"><dt>Precio</dt><dd>'+p.label+'</dd></div></dl>'+
-        '<form class="fields" id="bkForm" novalidate><div class="field"><label for="bk-name">Tu nombre</label><input id="bk-name" name="name" autocomplete="given-name" enterkeyhint="next" value="'+st.name.replace(/"/g,"&quot;")+'" required><span class="err" id="err-name"></span></div>'+
-        '<div class="field"><label for="bk-phone">Tu móvil</label><input id="bk-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="done" placeholder="600 000 000" value="'+st.phone.replace(/"/g,"&quot;")+'" required><span class="err" id="err-phone"></span></div>'+
-        '<div class="field full"><label for="bk-notes">¿Algo que deba saber? <span style="font-weight:400;color:var(--cocoa-2)">(opcional)</span></label><textarea id="bk-notes" name="notes" placeholder="Alergias, diseño que te gustaría…">'+st.notes.replace(/</g,"&lt;")+'</textarea></div></form>'+
-        '<p class="hint">Te enviaré un recordatorio el día antes. Si te surge algo, puedes cambiar la cita sin coste hasta 24 h antes.</p></div>';
-    }
-    if(st.step===5){
-      var s5=SVC[st.svc];
-      h='<div class="pane done-pane"><div class="burst" aria-hidden="true">✦</div><h3>¡Reserva confirmada'+(st.name?", "+st.name.split(" ")[0]:"")+'!</h3><p class="lead" style="margin:0 auto">Te espero el <strong>'+fmtDate(st.date)+'</strong> a las <strong>'+hm(st.time)+'</strong> para tu <strong>'+s5.name.toLowerCase()+'</strong>.</p><span class="code">'+st.code+'</span><p class="hint">Carrer de la Pau 2, Catarroja · 653 30 23 32</p><button type="button" class="btn btn-ghost" id="bkAgain">Hacer otra reserva</button><span class="demo-tag">Demo: esta reserva es simulada y no se ha enviado a nadie</span></div>';
-    }
-    body.innerHTML=h;
-    bindPane();
-    if(focus){
-      var f=body.querySelector("h3"); if(f){f.setAttribute("tabindex","-1");f.focus({preventScroll:true});}
-      if(isMobile.matches) scrollToCard();
-    }
-    var sel=body.querySelector('.pane .tabs [aria-pressed="true"]'); if(sel) revealTab(sel);
-  }
-  function bindPane(){
-    $$("[data-bcat]",body).forEach(function(b){b.addEventListener("click",function(){st.cat=b.dataset.bcat;render();});});
-    $$("[data-svc]",body).forEach(function(b){b.addEventListener("click",function(){
-      if(st.svc!==b.dataset.svc){st.date=null;st.time=null;}
-      st.svc=b.dataset.svc;$$("[data-svc]",body).forEach(function(x){x.setAttribute("aria-pressed",x===b);});updateFoot();
-    });});
-    $$("[data-week]",body).forEach(function(b){b.addEventListener("click",function(){st.weekOffset+=+b.dataset.week;render();});});
-    $$("[data-date]",body).forEach(function(b){b.addEventListener("click",function(){
-      var p=b.dataset.date.split("-");st.date=new Date(+p[0],+p[1]-1,+p[2]);st.time=null;
-      $$("[data-date]",body).forEach(function(x){x.setAttribute("aria-pressed",x===b);});updateFoot();
-    });});
-    $$("[data-t]",body).forEach(function(b){b.addEventListener("click",function(){
-      st.time=+b.dataset.t;$$("[data-t]",body).forEach(function(x){x.setAttribute("aria-pressed",x===b);});updateFoot();
-    });});
-    var again=$("#bkAgain",body);if(again)again.addEventListener("click",function(){st=Object.assign(st,{step:1,svc:null,date:null,time:null,code:null});render(true);});
-    var form=$("#bkForm",body);
-    if(form){
-      form.addEventListener("submit",function(e){e.preventDefault();next.click();});
-      ["name","phone","notes"].forEach(function(k){var i=$("#bk-"+k,body);i.addEventListener("input",function(){st[k]=i.value;});});
-      $("#bk-name",body).addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();$("#bk-phone",body).focus();}});
-    }
-  }
-  function validate(){
-    var ok=true,n=$("#bk-name"),p=$("#bk-phone");
-    $("#err-name").textContent="";$("#err-phone").textContent="";
-    if(!n.value.trim()){$("#err-name").textContent="Dime tu nombre para apuntarte la cita.";ok=false;}
-    var digits=p.value.replace(/\D/g,"");
-    if(!/^(34)?[6789]\d{8}$/.test(digits)){$("#err-phone").textContent="Escribe un móvil de 9 cifras, por ejemplo 600 123 456.";ok=false;}
-    if(!ok){var bad=!n.value.trim()?n:p;bad.focus();bad.scrollIntoView({block:"center",behavior:reduceMotion.matches?"auto":"smooth"});}
-    return ok;
-  }
-  next.addEventListener("click",function(){
-    if(next.disabled)return;
-    if(st.step===4){ if(!validate())return; if(document.activeElement)document.activeElement.blur(); st.code="GBE-"+(1000+Math.floor(Math.random()*9000)); st.step=5; render(true); return; }
-    if(st.step===1&&!st.date){ st.weekOffset=0; }
-    st.step++;render(true);
-  });
-  back.addEventListener("click",function(){if(st.step>1){st.step--;render(true);}});
-
-  function goBook(id){
-    if(id&&SVC[id]){ st.svc=id;st.cat=SVC[id].cat;st.date=null;st.time=null;st.step=2;st.weekOffset=0; }
-    else if(st.step===5){ st.step=1; }
-    render();
-    var y=$("#bk").getBoundingClientRect().top+window.scrollY-(nav.offsetHeight+12);
-    window.scrollTo({top:y,behavior:reduceMotion.matches?"auto":"smooth"});
-  }
-  $$("[data-book]").forEach(function(b){
-    b.addEventListener("click",function(e){e.preventDefault();setMenu(false);goBook(b.dataset.book);});
-  });
-  render();
-
-  // ---- Copiar teléfono ----
-  $("#copyTel").addEventListener("click",function(){
-    var b=this,txt="653 30 23 32";
-    function done(){b.textContent="Copiado ✦";setTimeout(function(){b.textContent="Copiar";},1800);}
-    function sel(){var r=document.createRange();r.selectNodeContents($(".phone .num"));var s=getSelection();s.removeAllRanges();s.addRange(r);}
-    try{navigator.clipboard.writeText(txt).then(done,sel);}catch(e){sel();}
-  });
-
-  // ---- Mapa bajo demanda ----
-  $("#loadMap").addEventListener("click",function(){
-    var f=document.createElement("iframe");
-    f.title="Mapa: Carrer de la Pau 2, Catarroja";f.loading="lazy";f.referrerPolicy="no-referrer-when-downgrade";
-    f.src="https://www.google.com/maps?q=Carrer%20de%20la%20Pau%202%2C%2046470%20Catarroja%2C%20Valencia&z=17&output=embed";
-    $("#map").appendChild(f);$(".map-cover").hidden=true;
-  });
-
-  // ---- Nav, FAB y animaciones ----
-  var fab=$("#fab"),heroEnd=$(".hero"),bk=$("#reserva"),bkVisible=false,ticking=false;
-  function onScroll(){
-    ticking=false;
-    nav.classList.toggle("scrolled",window.scrollY>8);
-    var past=heroEnd.getBoundingClientRect().bottom<0;
-    fab.classList.toggle("show",past&&!bkVisible);
-  }
-  window.addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});
-  if("IntersectionObserver" in window){
-    new IntersectionObserver(function(es){es.forEach(function(e){bkVisible=e.isIntersecting;});onScroll();},{threshold:0}).observe(bk);
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px"});
-    $$(".reveal").forEach(function(el){io.observe(el);});
-  }
-  onScroll();
-})();
-</script>
-
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
