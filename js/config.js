@@ -51,7 +51,7 @@
                      en Instagram.
 */
 window.CONFIG = {
-  urlBase: "https://glowbyerika.netlify.app/",
+  urlBase: "https://glowbyerika.pages.dev/",
   telefono: "34653302332",
   instagram: "https://www.instagram.com/glow.by.erika/",
 
