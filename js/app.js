@@ -21,7 +21,7 @@
   // ---- Horario: SCHEDULE[0..6] = [[inicio,fin],...] en minutos ----
   var SCHEDULE = DAY_KEYS.map(function(k){ return ((C.horario||{})[k]||[]).map(function(r){return [toMin(r[0]),toMin(r[1])];}); });
   function rangesTxt(rs){ return rs.map(function(r){return hm(r[0])+"–"+hm(r[1]);}).join(" y "); }
-  function scheduleSummary(){ // "L–V 9:30–13:30 y 16:00–20:00 · S 9:30–13:30"
+  function scheduleSummary(){ // "L 10:00–14:00 · M–X 10:00–14:00 y 15:00–19:00 · J 10:00–19:00 · V 10:00–14:00 y 15:00–19:00"
     var order=[1,2,3,4,5,6,0],groups=[];
     order.forEach(function(d){
       var t=rangesTxt(SCHEDULE[d]); if(!t) return;
