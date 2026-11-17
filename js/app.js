@@ -62,20 +62,31 @@
   });
 
   // ---- Promo (se oculta sola al día siguiente de "hasta") ----
-  var P=C.promo||{};
-  var promoOn=!!(P.mostrar&&P.precio&&(!P.hasta||NOW.iso<=P.hasta));
-  var promoIds=promoOn?(P.servicios||[]):[];
-  function priceOf(s){ return promoIds.indexOf(s.id)>-1 ? {label:P.precio,promo:true} : {label:s.label,promo:false}; }
+  // admite "promos" (lista) y el antiguo "promo" (una sola)
+  var PROMOS=(C.promos||(C.promo?[C.promo]:[])).filter(function(p){return p&&p.mostrar&&p.precio&&(!p.hasta||NOW.iso<=p.hasta);});
+  var P=PROMOS[0]||{};
+  function promoFor(id){ for(var i=0;i<PROMOS.length;i++){ if((PROMOS[i].servicios||[]).indexOf(id)>-1) return PROMOS[i]; } return null; }
+  function priceOf(s){ var pr=promoFor(s.id); return pr ? {label:pr.precio,promo:true,antes:pr.antes||""} : {label:s.label,promo:false,antes:""}; }
   (function(){
-    if(!promoOn) return;
+    if(!PROMOS.length) return;
+    var promoIds=P.servicios||[];
     var month=P.hasta?MONTHS[+P.hasta.slice(5,7)-1]:"";
     var t=esc(P.titulo||""),k=t.lastIndexOf(" y ");
     $("#promo-t").innerHTML=k>-1?t.slice(0,k+3)+"<em>"+t.slice(k+3)+"</em>":t;
     $("#promoEyebrow").textContent="Promo del mes"+(month?" · "+month.charAt(0).toUpperCase()+month.slice(1):"");
     $("#promoPrice").textContent=P.precio;
+    if(P.antes){ $("#promoOld").textContent=P.antes; $("#promoOld").hidden=false; }
     var until=P.hasta?" Válida hasta el "+(+P.hasta.slice(8,10))+" de "+month+", no lo dejes para el último día.":"";
     $("#promoTxt").textContent=(P.texto||"")+until;
     if(promoIds[0]) $("#promoBtn").setAttribute("data-book",promoIds[0]);
+    var more=PROMOS.slice(1);
+    if(more.length){
+      $("#promoMore").innerHTML="También este mes: "+more.map(function(p){
+        var id=(p.servicios||[])[0];
+        return '<a href="#reserva"'+(id?' data-book="'+esc(id)+'"':'')+'>'+esc(p.titulo)+'</a> <span class="nw">a '+(p.antes?'<s>'+esc(p.antes)+'</s> ':'')+esc(p.precio)+'</span>';
+      }).join(" · ");
+      $("#promoMore").hidden=false;
+    }
     $("#promo").hidden=false;
   })();
 
@@ -86,7 +97,9 @@
       return '<div class="menu-cat" id="cat-'+c.id+'" role="tabpanel" aria-labelledby="tab-'+c.id+'"><h3>'+esc(c.label)+(c.sub?' <small>'+esc(c.sub)+'</small>':'')+'</h3>'+
         c.items.map(function(s){
           var meta=[s.dur?s.dur+" min":"",s.detail].filter(Boolean).join(" · ");
-          return '<div class="svc"><span class="svc-name">'+esc(s.name)+'</span>'+(meta?'<span class="svc-meta">'+esc(meta)+'</span>':'')+'<span class="svc-price">'+esc(s.label)+'</span><a class="btn btn-ghost" href="#reserva" data-book="'+esc(s.id)+'" aria-label="Reservar '+esc(s.name)+'">Reservar</a></div>';
+          var p=priceOf(s);
+          var price=p.promo?(p.antes?'<s>'+esc(p.antes)+'</s> ':'')+esc(p.label):esc(s.label);
+          return '<div class="svc'+(p.promo?' svc-promo':'')+'"><span class="svc-name">'+esc(s.name)+(p.promo?' <span class="promo-tag">Promo</span>':'')+'</span>'+(meta?'<span class="svc-meta">'+esc(meta)+'</span>':'')+'<span class="svc-price">'+price+'</span><a class="btn btn-ghost" href="#reserva" data-book="'+esc(s.id)+'" aria-label="Reservar '+esc(s.name)+'">Reservar</a></div>';
         }).join("")+'</div>';
     }).join("");
     CATS.forEach(function(c,i){

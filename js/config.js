@@ -16,12 +16,16 @@
                      Con esto se calcula el "Abierto ahora / Cerrado · abrimos a las…"
                      (siempre con la hora de Madrid) y la tabla de horarios.
 
-  · promo .......... Promoción del mes.
+  · promos ......... Promociones del mes. Puede haber varias: la primera que esté
+                     activa sale en la tarjeta grande y las demás en una línea debajo.
+                     En la carta, los servicios en promo muestran el precio de antes
+                     tachado. Cada promo tiene:
         mostrar .... true para enseñarla, false para quitarla.
         titulo ..... Título. Lo que va después de la última " y " sale en rosa.
-        precio ..... Precio tal cual se muestra, con el símbolo €.
-        hasta ...... Último día de la promo (AAAA-MM-DD). Al día siguiente se oculta sola
-                     (banda, pegatina del precio en la portada y botón).
+        precio ..... Precio de promo tal cual se muestra, con el símbolo €.
+        antes ...... Precio sin promo, que sale tachado (opcional).
+        hasta ...... Último día de la promo (AAAA-MM-DD). Al día siguiente se oculta
+                     sola y la carta vuelve a su precio normal.
         servicios .. Ids de la carta a los que se aplica el precio de promo.
         texto ...... Frase debajo del título (opcional).
 
@@ -65,14 +69,27 @@ window.CONFIG = {
     domingo:   []
   },
 
-  promo: {
-    mostrar: true,
-    titulo: "Uñas de Gel y PolyAcrylGel",
-    precio: "25 €",
-    hasta: "2026-11-30",
-    servicios: ["unas-gel", "poly"],
-    texto: "Uñas resistentes, finas y con acabado impecable a precio especial."
-  },
+  // Promos de noviembre publicadas en el Instagram de Erika
+  promos: [
+    {
+      mostrar: true,
+      titulo: "Ritual Glow",
+      precio: "45 €",
+      antes: "60 €",
+      hasta: "2026-11-30",
+      servicios: ["ritual"],
+      texto: "Un ritual de 60 minutos pensado para desconectar, relajarte y salir renovada: masajes, ritual facial con mascarilla y presoterapia ocular."
+    },
+    {
+      mostrar: true,
+      titulo: "Ácido hialurónico",
+      precio: "30 €",
+      antes: "35 €",
+      hasta: "2026-11-30",
+      servicios: ["hialuronico"],
+      texto: "Tratamiento facial de hidratación profunda para una piel más luminosa."
+    }
+  ],
 
   servicios: [
     { id: "faciales", categoria: "Faciales", subtitulo: "Piel luminosa, limpia y cuidada", items: [
@@ -112,8 +129,7 @@ window.CONFIG = {
       { id: "pack-cuerpo",  nombre: "Pack cuerpo completo",       duracion: 90, detalle: "", precio: 35,           mostrar: true }
     ]},
     { id: "masajes", categoria: "Masajes y rituales", subtitulo: "", items: [
-      // CONFIRMAR NOMBRE Y PRECIO CON ERIKA ("Ritual Glow", 60 €)
-      { id: "ritual",  nombre: "Ritual Glow",       duracion: 60, detalle: "facial + masaje relajante",    precio: 60, mostrar: true },
+      { id: "ritual",  nombre: "Ritual Glow",       duracion: 60, detalle: "masaje de espalda, cuello, brazos, piernas, pies y craneal, ritual facial con mascarilla y presoterapia ocular", precio: 60, mostrar: true },
       { id: "masaje",  nombre: "Masaje localizado", duracion: 30, detalle: "espalda, cuello o piernas",    precio: 30, mostrar: true },
       { id: "madero",  nombre: "Maderoterapia",     duracion: 60, detalle: "moldea y drena",               precio: 60, mostrar: true }
     ]},
