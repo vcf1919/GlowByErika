@@ -10,7 +10,6 @@
   var DAYS_ES = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
   var DAYS_CAP = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
   var DAYS_SHORT = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
-  var DAY_LETTER = ["D","L","M","X","J","V","S"];
   var DAY_KEYS = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado"];
   var MONTHS = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
   var TEL = C.telefono || "34653302332";
@@ -20,16 +19,6 @@
 
   // ---- Horario: SCHEDULE[0..6] = [[inicio,fin],...] en minutos ----
   var SCHEDULE = DAY_KEYS.map(function(k){ return ((C.horario||{})[k]||[]).map(function(r){return [toMin(r[0]),toMin(r[1])];}); });
-  function rangesTxt(rs){ return rs.map(function(r){return hm(r[0])+"–"+hm(r[1]);}).join(" y "); }
-  function scheduleSummary(){ // "L 10:00–14:00 · M–X 10:00–14:00 y 15:00–19:00 · J 10:00–19:00 · V 10:00–14:00 y 15:00–19:00"
-    var order=[1,2,3,4,5,6,0],groups=[];
-    order.forEach(function(d){
-      var t=rangesTxt(SCHEDULE[d]); if(!t) return;
-      var g=groups[groups.length-1];
-      if(g&&g.t===t&&order.indexOf(d)===order.indexOf(g.last)+1){g.last=d;} else groups.push({first:d,last:d,t:t});
-    });
-    return groups.map(function(g){return DAY_LETTER[g.first]+(g.first!==g.last?"–"+DAY_LETTER[g.last]:"")+" "+g.t;}).join(" · ");
-  }
 
   // ---- Hora de Madrid ----
   function madridNow(){
@@ -48,10 +37,10 @@
     if(open){ txt="<strong>Abierto ahora</strong> · cierra a las "+hm(open[1]); }
     else{
       el.classList.add("closed");
-      if(next){ txt="<strong>Cerrado</strong> · abrimos hoy a las "+hm(next[0]); }
-      else{ for(var i=1;i<8;i++){var d=(dow+i)%7; if(SCHEDULE[d].length){ txt="<strong>Cerrado</strong> · abrimos "+(i===1?"mañana":"el "+DAYS_ES[d])+" a las "+hm(SCHEDULE[d][0][0]); break;} } }
+      if(next){ txt="<strong>Cerrado</strong> · abre hoy a las "+hm(next[0]); }
+      else{ for(var i=1;i<8;i++){var d=(dow+i)%7; if(SCHEDULE[d].length){ txt="<strong>Cerrado</strong> · abre "+(i===1?"mañana":"el "+DAYS_ES[d])+" a las "+hm(SCHEDULE[d][0][0]); break;} } }
     }
-    $("#openTxt").innerHTML=(txt?txt+" · ":"")+scheduleSummary();
+    if(txt) $("#openTxt").innerHTML=txt;
     $("#hours").innerHTML=[1,2,3,4,5,6,0].map(function(d){
       return '<div data-d="'+d+'"'+(d===dow?' class="today"':'')+'><dt>'+DAYS_CAP[d]+'</dt><dd>'+(SCHEDULE[d].length?SCHEDULE[d].map(function(r){return hm(r[0])+"–"+hm(r[1]);}).join(" · "):"Cerrado")+'</dd></div>';
     }).join("");
@@ -87,18 +76,7 @@
     var until=P.hasta?" Válida hasta el "+(+P.hasta.slice(8,10))+" de "+month+", no lo dejes para el último día.":"";
     $("#promoTxt").textContent=(P.texto||"")+until;
     if(promoIds[0]) $("#promoBtn").setAttribute("data-book",promoIds[0]);
-    $("#stickerPromoPrice").textContent=P.precio;
-    $("#stickerPromoTxt").textContent="Promo"+(month?" de "+month:"");
-    $("#promo").hidden=false; $("#stickerPromo").hidden=false;
-  })();
-
-  // ---- Pegatina "Desde X €": mínimo real de la depilación facial ----
-  (function(){
-    var cat=CATS.filter(function(c){return c.id==="dep-facial";})[0];
-    var el=$("#stickerFrom");
-    var nums=cat?cat.items.map(function(s){return s.num;}).filter(function(n){return n!=null;}):[];
-    if(!nums.length){ el.hidden=true; return; }
-    el.innerHTML="<b>Desde "+Math.min.apply(null,nums)+" €</b>Cejas y depilación facial";
+    $("#promo").hidden=false;
   })();
 
   // ---- Carta ----
@@ -122,6 +100,20 @@
         CATS.forEach(function(x){$("#cat-"+x.id).hidden=x.id!==c.id;});
       });
       tabs.appendChild(b);
+    });
+  })();
+
+  // ---- Índice de la carta: cada número abre su pestaña ----
+  (function(){
+    var box=$("#cartaIndex"); if(!box) return;
+    box.innerHTML='<ol>'+CATS.map(function(c,i){
+      return '<li><a href="#servicios" data-cat="'+esc(c.id)+'"><span class="n">'+(i<9?"0":"")+(i+1)+'</span>'+esc(c.label)+'</a></li>';
+    }).join("")+'</ol>';
+    $$("a[data-cat]",box).forEach(function(a){
+      a.addEventListener("click",function(){
+        var t=$("#tab-"+a.getAttribute("data-cat")); if(!t) return;
+        t.click(); var tabs=$("#tabs"); tabs.scrollLeft=t.offsetLeft-tabs.offsetLeft-18;
+      });
     });
   })();
 
@@ -296,8 +288,7 @@
   (function(){
     var R=(C.resenas||[]).filter(function(r){return r&&r.texto;}),box=$("#revBox");
     if(R.length){
-      $("#rev-t").textContent="Así se van mis clientas";
-      $("#revLead").hidden=true;
+      $("#opiniones").hidden=false;
       // las copias (dup) solo sirven para que el desplazamiento sea continuo: no se leen dos veces
       var revHtml=function(r,dup){return '<article class="rev'+(dup?' dup':'')+'"'+(dup?' aria-hidden="true"':'')+'><p>“'+esc(r.texto)+'”</p><footer>'+esc(r.nombre||"")+(r.servicio?" · "+esc(r.servicio):"")+'</footer></article>';};
       var rows=R.length>=2?[R.filter(function(_,i){return i%2===0;}),R.filter(function(_,i){return i%2===1;})]:[R];
@@ -307,10 +298,8 @@
         var second=list.map(function(r){return revHtml(r,true);}).join("");
         return '<div class="rev-row'+(i?' rev-back':'')+'">'+first+second+'</div>';
       }).join("")+'</div>';
-    } else {
-      box.innerHTML='<div class="rev-cta reveal">'+(C.googleUrl
-        ? '<p>Si ya has venido, cuéntanos qué tal en Google. Solo lleva un minuto y nos ayuda muchísimo.</p><a class="btn" href="'+esc(C.googleUrl)+'" target="_blank" rel="noopener">Dejar mi opinión en Google <span class="spark" aria-hidden="true">✦</span></a>'
-        : '<p>Mientras tanto, en Instagram puedes ver los últimos trabajos y contarnos qué tal te fue.</p><a class="btn btn-ghost" href="'+esc(C.instagram||"https://www.instagram.com/glow.by.erika/")+'" target="_blank" rel="noopener">Seguir en Instagram</a>')+'</div>';
+    } else if(C.googleUrl){
+      $("#aboutAsk").innerHTML='¿Ya has venido? <a href="'+esc(C.googleUrl)+'" target="_blank" rel="noopener">Cuéntame qué tal en Google</a>';
     }
   })();
 
@@ -342,14 +331,10 @@
   });
 
   // ---- Nav, botón flotante y animaciones ----
-  var nav=$("#nav"),fab=$("#fab"),heroEnd=$(".hero"),bk=$("#reserva"),bkVisible=false;
-  function onScroll(){
-    nav.classList.toggle("scrolled",window.scrollY>8);
-    fab.classList.toggle("show",heroEnd.getBoundingClientRect().bottom<0&&!bkVisible);
-  }
+  var nav=$("#nav");
+  function onScroll(){ nav.classList.toggle("scrolled",window.scrollY>8); }
   window.addEventListener("scroll",onScroll,{passive:true});
   if("IntersectionObserver" in window){
-    new IntersectionObserver(function(es){es.forEach(function(e){bkVisible=e.isIntersecting;});onScroll();},{threshold:.15}).observe(bk);
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px"});
     $$(".reveal").forEach(function(el){io.observe(el);});
   }
